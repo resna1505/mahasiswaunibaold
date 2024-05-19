@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	font-family:"arial", verdana, tahoma ;
+	}
+	
+body {
+	background-color:#fdf5f7;
+	}
+	
+#wrap {
+	margin:auto;
+	width:100%;
+	}
+	
+#title {
+		height:40px;
+		color:#fff;
+		font-size:24px;
+		line-height:38px;
+		text-align:center;
+		background:#ab1231;
+		border:1px solid #ab1231;
+		outline:1px solid #f3d9de;
+	}
+	
+#link_alpha {
+	height:60px;
+	margin-bottom:30px;
+	text-align:center;
+	}
+	
+.mainlink {
+	margin:auto;
+	width:600px;
+	text-align:center;
+	}
+	
+.mainlink li {
+	list-style:none;
+	margin-right:4px;
+	float:left;
+	line-height:58px;
+	display:block;
+	}
+	
+.mainlink li a {
+	text-decoration:none;
+	color:#ab1231;
+	font-size:13px;
+	font-weight:bold;
+	padding:0px 2px;
+	background-color:#f3d9de;
+	border:1px solid #ab1231;
+	outline:1px solid #ab1231;
+	}
+
+/*.mainlink li a:visited {
+	color:#115981;
+	}*/
+	
+.mainlink li a:hover {
+	color:#fff;
+	background-color:#ab1231;
+	border:1px solid #fdf5f7;
+	outline:1px solid #f3d9de;
+	}
+	
+#forminput {
+	height:180px;
+	position:relative;
+	}
+	
+.box{
+	margin:auto;
+	width:99%;
+	padding-top:10px;
+	background:#fdf5f7;
+	border:1px solid #ab1231;
+	outline:1px solid #ab1231;
+}
+
+.smallabel{
+	width:100%;
+	display: block;
+	padding:4px 0px 5px 0px;
+}
+
+.textfield {
+	margin-left:10px;
+	padding:4px;
+	background:url(../images/bgform.jpg) repeat-x;
+	border:1px solid #fff;
+	outline:1px solid #ab1231;
+	}
+	
+option {
+	background-color:#edecec;
+	color:#04415d;
+}
+
+.smallspan{
+	display: block;
+	font-size:13px;
+	float:left;
+	width:80px;
+	text-align:right;
+	padding:5px 10px 0px 0px;
+}
+
+.input_text{
+	padding:4px;
+	margin-left:10px;
+	width:245px;
+	background:url(../images/bgform.jpg) repeat-x;
+	border:1px solid #fff;
+	outline:1px solid #ab1231;
+}
+
+.tinytext {
+	font-size:11px;
+	margin-left:120px;
+	margin-bottom:10px;
+}
+
+.login { 
+		margin:5px 0 10px 100px;
+		width:72px;
+		height:30px;
+		background:url(../images/loginbutton.png) no-repeat;
+		text-align:center;
+		padding-bottom:4px;
+		color:#000;
+		cursor:pointer;
+		text-shadow: 0px 1px 3px rgba(6,103,147, 30);
+ 		text-shadow: 0px 1px 2px #f3d9de; filter: Shadow(Color=#fdf5f7, Direction=180, Strength=1);
+		border:1px solid #ab1231;
+	}
+	
+.login:hover {
+	background:url(../images/loginbutton.png) no-repeat 0px -31px;
+}
+
+.showall {
+		float:left;
+		text-decoration:none;
+		color:#000;
+		text-shadow: 0px 1px 3px rgba(9,87,122, 30);
+ 		text-shadow: 0px 1px 2px #fdf5f7; filter: Shadow(Color=#fdf5f7, Direction=180, Strength=1);
+		line-height:32px;
+		padding:0px 10px;
+		margin:10px 5px;
+		top:140px;
+		height:34px;
+		background:url(../images/show.png) no-repeat;
+		/*background-color:#bddcee;
+		border:1px solid #ebf8ff;
+		outline:1px solid #4697c3;*/
+	}
+
+.showall:hover {
+		color:#ab1231;
+		background:url(../images/show.png) no-repeat 0px -35px;
+		/*background-color:#ab1231;
+		border:1px solid #5da4cb;
+		outline:1px solid #3f7796;*/
+	}
+	
+#tablecontent {
+	margin:5px;
+	background-color:#bddcee;
+	border:1px solid #ebf8ff;
+	outline:1px solid #6ba9cb;
+	}
+	
+.juduldata {
+	background-color:#ab1231;
+	padding:10px 5px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:capitalize;
+	}
+	
+.judul2 a {
+	color:#fff;	
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.judul2 a:hover {
+	text-decoration:none;	
+}
+	
+.dataganjil {
+	background-color:#cae1ef;
+	padding:10px 5px;
+	}
+
+.datagenap {
+	background-color:#ddf0fb;
+	padding:10px 5px;
+	}
+	
+	
+table {
+	width:100%;
+}
+
+tr {
+	height:25px;
+}
+
+td {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.isi2 {
+	color:#0c4d71;
+}
+
+.isi2 a {
+	color:#df8626;	
+	text-decoration:none;
+}
+
+.isi2 a:hover {
+	color:#0c4d71;	
+	text-decoration:underline;
+}
+	
+/*a {
+	text-transform:capitalize;
+	color:#c4890c;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#1f93cf;
+	text-decoration:underline;
+}*/	

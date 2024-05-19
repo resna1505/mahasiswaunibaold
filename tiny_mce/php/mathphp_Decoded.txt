@@ -1,0 +1,505 @@
+
+  1
+  "st"
+  1  "strpos"
+  "st"
+  "^-1"
+  ^-1
+  "st"
+  "^(-1)"
+  ^(-1)
+  "str_replace"
+  "sin^-1"  str_replace
+  "asin"
+  "st"
+
+  "str_replace"
+  "sinh^-1"  str_replace
+  "asinh"
+  "st"
+
+  "st"
+  "matches"
+  "matches"
+  "matches"
+  "matches"
+  "st"
+  "varlist"
+  "st"
+  "preg_replace_callback"
+  "/(\$[a-zA-Z\d_]+)(.)/"
+  "parenvarifneeded"
+  "st"
+
+  "varlist"
+  "varlist"
+  "preg_replace"
+  "reg"
+
+  "st"
+
+  "preg_replace"
+  "reg"
+
+  "st"
+
+  "varlist"
+  "preg_replace"
+  "reg"
+
+  "st"
+
+  "varlist"
+  "preg_replace"
+  "reg"
+
+  "st"
+
+  "varlist"
+  "preg_replace"
+  "reg"
+
+  "st"
+
+  "preg_replace"
+  "/\s/"
+  "33709000"
+  "st"
+
+  "str_replace"
+  "arcsin"  str_replace
+  "asin"
+  "st"
+
+  "strpos"
+  "st"
+  "^-1"
+  ^-1
+  "st"
+  "^(-1)"
+  ^(-1)
+  "str_replace"
+  "sin^-1"  str_replace
+  "asin"
+  "st"
+
+  "str_replace"
+  "sinh^-1"  str_replace
+  "asinh"
+  "st"
+
+  "st"
+  "st"
+  "st"
+  "st"
+  "preg_replace"
+  "/^e$/"
+  "(exp(1))"
+  "st"
+
+  "preg_replace"
+  "/^pi([^a-zA-Z])/"
+  /^pi([^a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  preg_replace
+
+  "st"
+
+  "preg_replace"
+  "/([^a-zA-Z])pi([^a-zA-Z])/"
+  /([^a-zA-Z])pi([^a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  "/^e([^a-zA-Z])/"
+  /^e([^a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  "/([^a-zA-Z$])e$/"
+  /([^a-zA-Z$])e$/
+  "st"
+
+  "preg_replace"
+  "/([^a-zA-Z$])e([^a-zA-Z])/"
+  /([^a-zA-Z$])e([^a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  "/([0-9])([\(])/"
+  /([0-9])([\(])/
+  "st"
+
+  "varlist"
+  "preg_replace"
+  "varlist"
+
+  "st"
+
+  "preg_replace"
+  "/([0-9])(sin|cos|tan|sec|csc|cot|ln|log|exp|asin|acos|atan|sqrt|abs)/"
+  /([0-9])(sin|cos|tan|sec|csc|cot|ln|log|exp|asin|acos|atan|sqrt|abs)/
+  "st"
+
+  "preg_replace"
+  "/([0-9])\*\(exp\(1\)\)([0-9])/"
+  "\1E\2"
+  "st"
+
+  "preg_replace"
+  "/([0-9])\*E([\-0-9])/"
+  "\1E\2"
+  "st"
+
+  "preg_replace"
+  "/\)([\(0-9a-zA-Z])/"
+  /\)([\(0-9a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  "/\/(\-[\d\.E]+)(\*|\/)/"
+  /\/(\-[\d\.E]+)(\*|\/)/
+  "st"
+
+  "strpos"
+  "st"
+  "^"
+  ^
+  "i"
+  "Error: missing argument"
+  "i"
+  "substr"
+  "st"
+  "j"
+  1
+  1
+  "ch"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+  "ch"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+
+  "ch"
+  "nested"
+  "j"
+  "substr"
+  "st"
+  "j"
+  1
+  1
+  "ch"
+  "nested"
+  "ch"
+  "nested"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+  "ch"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+
+  "st"
+  "i"
+  "st"
+
+  "Error: missing argument"
+  "i"
+  "substr"
+  "st"
+  "k"
+  1
+  1
+  "ch"
+  "k"
+  "st"
+
+  "st"
+  "k"
+  1
+  1
+  "k"
+  "ch"
+  "k"
+  "st"
+
+  "st"
+  "k"
+  1
+  1
+  "k"
+
+  "ch"
+  "nested"
+  "k"
+  "st"
+
+  "substr"
+  "st"
+  "k"
+  1
+  1
+  "ch"
+  "nested"
+  "ch"
+  "nested"
+
+  "ch"
+  "k"
+  "st"
+
+  "st"
+  "k"
+  1
+  1
+  "k"
+  "ch"
+  "/^(sin|cos|tan|sec|csc|cot|sinh|cosh|tanh|sech|csch|coth|ln|log|exp|asin|acos|atan|asinh|acosh|atanh|sqrt|abs)$/"
+  /^(sin|cos|tan|sec|csc|cot|sinh|cosh|tanh|sech|csch|coth|ln|log|exp|asin|acos|atan|asinh|acosh|atanh|sqrt|abs)$/  "substr"
+  "st"
+  "i"
+  "k"
+
+
+  "nested"
+  "k"
+  "st"
+
+  "substr"
+  "st"
+  "k"
+  1
+  1
+  "ch"
+  "nested"
+  "ch"
+  "nested"
+
+  "st"
+  "substr"
+  "st"
+  0
+  "j"
+
+  "st"
+  "j"
+  "i"
+
+  "st"
+  "i"
+  "k"
+
+  "st"
+  "k"
+
+
+  "strpos"
+  "st"
+  "!"
+  !
+  "i"
+  "Error: missing argument"
+  "i"
+  "substr"
+  "st"
+  "j"
+  1
+  1
+  "ch"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+  "ch"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+
+  "ch"
+  "nested"
+  "j"
+  "substr"
+  "st"
+  "j"
+  1
+  1
+  "ch"
+  "nested"
+  "ch"
+  "nested"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+  "ch"
+  "j"
+  "st"
+  "j"
+  1
+  1
+  "j"
+
+  "st"
+  "substr"
+  "st"
+  0
+  "j"
+
+  "st"
+  "j"
+  "i"
+
+  "st"
+  "i"
+
+
+  "preg_replace"
+  "/^log([^a-zA-Z])/"
+  /^log([^a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  "/([^a-zA-Z$])log$/"
+  "\1log10"
+  "st"
+
+  "preg_replace"
+  "/([^a-zA-Z$])log([^a-zA-Z])/"
+  /([^a-zA-Z$])log([^a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  "/^ln([^a-zA-Z])/"
+  /^ln([^a-zA-Z])/
+  "st"
+
+  "preg_replace"
+  "/([^a-zA-Z$])ln$/"
+  "\1log"
+  "st"
+
+  "preg_replace"
+  "/([^a-zA-Z$])ln([^a-zA-Z])/"
+  /([^a-zA-Z$])ln([^a-zA-Z])/
+  "st"
+
+  "st"
+  "base"
+  "power"
+  "base"
+  "power"
+  "sqrt"
+  0  1
+
+  0
+  "base"
+  "power"
+
+  "j"
+  "j"
+  "abs"
+  "round"
+  "j"
+
+
+  "round"
+  "j"
+
+  "exp"
+  "power"
+  power  "abs"
+  "base"
+
+
+
+  "exp"
+  "power"
+  power  "abs"
+  "base"
+
+
+
+  "j"
+  2
+  "sqrt"
+  0  1
+
+  "floor"
+  "base"
+
+  "power"
+
+  "pow"
+  "abs"
+  "base"
+
+  "power"
+
+
+  "exp"
+  "power"
+  power  "abs"
+  "base"
+
+
+
+  "base"
+  "result"
+  "result"
+  "x"
+  "x"
+  "i"
+  "i"
+  "i"
+  "x"
+  "false"
+  "x"
+  1
+  "x"
+  "x"
+  1  "cos"
+  "x"
+
+  "x"
+  1  "sin"
+  "x"
+
+  "x"
+  1  "tan"
+  "x"
+
+  "x"
+  1  "cosh"
+  "x"
+
+  "x"
+  1  "sinh"
+  "x"
+
+  "x"
+  1  "tanh"
+  "x"

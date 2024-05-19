@@ -1,0 +1,20 @@
+Catatan 
+03 02 3008
+
+Pemrosesan IPK/Transkrip akan sangat cepat...
+
+Efek negatif: Tidak ada kecuali:
+- 
+Nama mata Kuliah di transkrip bisa tidak sesuai dengan perubahan kurikulum.
+
+Akan diperbaiki segera.
+
+Misal, di Tabel Mata Kuliah, 
+Kode 111 adalah Matematika
+Tapi di Kurikulum 2006/2007 (saat mengambil mata kuliah), kode 111 adalah Matematika Dasar, yang tampil di Transkrip adalah 111 = Matematika, bukan Matematika Dasar.
+
+Akan segera diperbaiki tapi mempengaruhi tabel pengembilanmk (tabel pengambilanmk akan ditambahkan field Nama mata Kuliah....)
+
+Sudah ditambahkan.. tapi yg SP belum....
+
+Pengolahan KRS tampilannya agak diubah supaya mempercepat proses KRS.

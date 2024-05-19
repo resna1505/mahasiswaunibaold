@@ -1,0 +1,39 @@
+bug 1
+daftar Referensi Program Studi di P.T. 
+link = http://localhost/prog_sikad/makul/index.php?pilihan=mtambah
+tampilan pop up menampilkan index
+
+klo session nya habis emang gitu
+
+
+bug 2
+kurikulum
+link = http://localhost/prog_sikad/makul/index.php
+tampilan = Table 'dbsikad_stikes_ubudiyah.tbkmk' doesn't exist 
+link 2 = http://localhost/prog_sikad/makul/index.php
+tampilan = Table 'dbsikad_stikes_ubudiyah.tbkmk' doesn't exist 
+
+bug 3
+pop up daftar mahasiswa tombol tampilkan semua tidak pada posisinya
+link pop up = http://localhost/prog_sikad/lib/listmhs.php?pfld=form,wewenang,id&pfltr=
+link halaman = http://localhost/prog_sikad/nilai/index.php?pilihan=editmhs
+
+bug 4
+status kelulusan di pmb
+link = http://localhost/prog_sikad/daftar/index.php
+
+bug 5
+penambahan forum gagal
+link = http://localhost/prog_sikad/forum/index.php?pilihan=tambah
+
+bug 6
+buat pesan
+link = http://localhost/prog_sikad/pesan/index.php?pilihan=kirim
+
+bug 7
+cadangan data muncul can't find tbdos
+link = http://localhost/prog_sikad/cadangan/buatcadangan.php
+
+bug 8
+data instansi tidak bisa di update
+link = http://localhost/prog_sikad/sistem/index.php?pilihan=update

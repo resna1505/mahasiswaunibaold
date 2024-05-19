@@ -1,0 +1,64 @@
+
+  "imgdir"
+  "_SERVER"  imgs/
+  "rtrim"
+  "dirname"
+  "_SERVER"  dirname
+
+  "/\"
+  /\
+  "_GET"
+  "_GET"  trim
+
+  "stripslashes"
+  "_GET"  stripslashes
+
+
+  "md5"
+  "_GET"  md5
+
+  "file_exists"
+  "imgdir"
+
+  "asciisvgimg.php"
+  asciisvgimg.php  "AStoIMG"
+
+  300
+  300
+  300
+  "AS"
+  "AS"
+
+  "AS"
+
+
+  "_GET"
+  "stripslashes"
+  "_GET"  stripslashes
+
+
+  "md5"
+  "_GET"  md5
+
+  "file_exists"
+  "imgdir"
+
+  "asciisvgimg.php"
+  asciisvgimg.php  "AStoIMG"
+
+  300
+  300
+  300
+  "AS"
+  "AS"
+
+  "AS"
+
+  "HTTPS"
+  "http"
+  https
+  "http"
+  "header"
+  header
+
+  1

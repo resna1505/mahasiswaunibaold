@@ -1,0 +1,641 @@
+<? 
+ 	$style= "
+		
+			<style type=\"text/css\">
+			<!--
+			
+
+/************** CSS untuk a dan td*******************************/
+			
+			a, a:link,visited,active { color:#0E4AA0;text-decoration:none;}
+			a:hover{ color:#FF9400;text-decoration:underline;}
+			 td {font-size:5.5pt;font-family:verdana,Arial;};
+
+			td.warnalibur {background-color: #996666;color:#ffffff;}
+			td.warnatidakmasuk {background-color: #cccc44;color:#000000;}
+			td.warnatidakmasukberalasan {background-color: #aaee00;color:#000000;}
+			td.warnatelat {background-color: #aaaaaa;}
+			td.warnapulangcepat {background-color: #aaaaaa;}
+			td.warnatidakabsenpulang {background-color: #cc9999;}
+
+
+/************** End CSS untuk a dan td*******************************/
+
+
+/************** CSS untuk Body*******************************/
+			body {  position: static; background-color:#FAFAFA; 
+			background-position: center top; font-size: small; font-style: normal; 
+			font-weight: bolder; color: $warnateks; border: medium #FFFFFF solid; list-style-position: outside; list-style-type: circle;
+			margin:0;padding:0;
+			}
+			body.diskusi {  position: static; background-color: #eeeeff; background-position: center top; font-size: small; font-style: normal; 
+			font-weight: bolder; color: $warnateks; border: medium #FFFFFF solid; list-style-position: outside; list-style-type: circle;
+			margin-top:0;margin-left:0;margin-right:0;margin-bottom:0;
+			}
+			body.cetak {  position: static; background-color: #ffffff; 
+			background-position: center top; font-size: 8pt; 
+			font-family:Arial;font-style: normal; 
+			font-weight: bolder; color: $000000; border: medium #FFFFFF solid; 
+			list-style-position: outside; list-style-type: circle;
+			margin-top:0;margin-left:0;margin-right:0;margin-bottom:0;
+			}
+			table{
+			margin:0;
+			padding:0;
+			border:0;
+			}
+
+
+/************** CSS Tabel Utama Program*******************************/
+			table.utama {  
+				width=770;height=80%;
+				border-collapse:collapse;
+				background-color:;
+			}
+
+/************** CSS Header Tampilan*******************************/
+			table.head {  /**maincontent table **/
+				background:url('".$root."css/polpaj/header_bg.jpg' top repeat-x);
+				border-collapse:collapse;
+				color:#000099;
+				
+			}
+			#tr_header{
+			background:url('".$root."css/polpaj/header_bg.jpg') top repeat-x;
+				}
+			#header{
+				background:url('".$root."css/polpaj/headerimg.jpg') bottom right no-repeat;
+				}
+			.head {
+				color:#ffffff;
+			}
+			
+/************** Frontpage ****************************************/
+	#date_time{
+	paddingt:20px;
+	margin-right:32px;
+	}
+	#date {
+	font:normal 10px  Georgia, 'Times New Roman', Times, serif;
+	color:#333;
+	}
+		#date font {
+			font:normal 11px  Georgia, 'Times New Roman', Times, serif;
+			color:#333;
+			padding:0 6px 0 0;
+			}
+	#time {
+	font:normal 10px  Georgia, 'Times New Roman', Times, serif;
+	color:#333333;
+	right:0;
+	float:left;}
+		#time input {
+			border:1px solid #99999;
+			background:#e0e0e0;
+			font:bolder 11px 'Courier New', Courier, mono;
+			padding:2px 4px;
+			text-align:right;
+			width:72px;
+			line-height:12px;
+			height:18px;
+			}
+
+/****************frontpage end ************************************/
+
+/** Mainmenubar */
+a.mainmenu{
+	background:#FAFAFA url('".$root."css/polpaj/mainmenu_down1.jpg') repeat-x;
+	line-height:24px;
+	padding: 2px 4px;
+	}
+	a:hover.mainmenu{
+	background:#FAFAFA url('".$root."css/polpaj/mainmenu_up1.jpg') bottom repeat-x;
+	text-decoration:none;
+	border-top:none;
+	border-bottom:1px solid #666;
+	}
+/* mainmenubar end */
+			
+/************** CSS untuk Tabel Judul menu*******************************/
+			table.judulmenu {  
+				padding:0px;	
+				width= 95%;
+				border-collapse:collapse;
+				border-bottom:1px solid #A3B174;
+			}
+			td.judulmenu {
+				height:24px;  
+				font:bold 18px/24px verdana,arial;
+				text-align:left;
+				line-height:24px;
+				vertical-align:middle;
+				background:url('".$root."css/polpaj/maincontent_title_left.jpg') left no-repeat ;
+				float:left;
+			}
+			table.judulmenukecil {  
+				background-color: #ffffff ;
+				padding-top: 4;				
+				padding-left: 4;				
+				padding-bottom: 4;				
+				padding-right: 4;				
+				width=95%;
+				border-collapse:collapse;
+				font-family: Arial;
+				font-size:10pt;
+				font-weight:bold;
+			}
+
+				tr.dataganjilmenu td, tr.datagenapmenu td {
+					width:auto;
+					background:#e0e0e0;
+					}
+			tr.dataganjilmenu {  
+				color: #000000; 
+ 				font-family: Verdana;
+				font-size:8pt;
+			}
+					td.dataganjilmenu {  
+						color: #000000; 
+						font-family: Verdana;
+						font-size:8pt;
+					}
+			tr.datagenapmenu {  
+				color: #000000; 
+ 				font-family: Verdana;
+				font-size:8pt;
+			}
+					td.datagenapmenu {  
+						color: #000000; 
+						font-family: Verdana;
+						font-size:8pt;
+					}
+
+/************** CSS untuk Welcome User*******************************/
+			.welcome {  
+				width=770;
+				width=auto;
+				background:#FAFAFA url('".$root."css/polpaj/tab_bg.jpg') left repeat-x ;
+				border-collapse:collapse;
+				color:#7A090A;
+				font-family:Verdana;
+				
+			}
+			table.welcomemenu {
+					margin:0;padding:0;  
+					width=100%;
+					height:24px;
+					border-collapse:collapse;
+					border:0 solid #ddddd;
+					color:#7A090A;
+					font-family: Verdana;
+					line-height:24px;
+					font-size:8pt;
+				}
+			td.welcomemenu {  
+				padding:0px; margin:0;
+				font-family:normal 12px/24px Verdana;
+				color:#7A090A;
+				background:#FAFAFA url('".$root."css/polpaj/tab_bg.jpg') left repeat-x ;
+				height:24px;
+			}
+				td.welcomemenu a{
+					color:#7A090A;
+					}
+			
+				a.welcomemenu {
+					padding:4px;  
+					color:#7A090A;
+					font-size:8pt;
+					font-family:Verdana;
+					text-decoration:none;
+				}
+				a.welcomemenu:active, 
+				a.welcomemenu:visited, 
+				a.welcomemenu:link {  
+					color:#002244;
+					font-size:8pt;
+					font-family:Verdana;
+					text-decoration:none;
+				}
+				a.welcomemenu:hover {  
+					color:#002244;
+					font-size:8pt;
+					font-family:Verdana;
+					text-decoration:none;
+				}
+				
+			
+ /************** CSS untuk Footer*******************************/
+			table.footer { 
+ 				border-collapse:collapse;
+			}
+			tr.footer {
+				background:#aaa;
+				color:#FFFFFF;
+				font:normal 8px/14px verdana,arial, sans-serif;
+				 }
+				  tr.footer td {
+				  border-top:4px solid #ccc;
+				color:#FFFFFF;
+				font:normal 9px/14px verdana,arial, sans-serif;
+				 }
+
+/************** CSS untuk Sub Menu*******************************/
+			table.menu {  			
+ 				border-collapse:collapse;
+				font-family: Verdana;
+				
+				
+			}
+			table.submenu {  		
+				width:160px;
+				border-collapse:collapse;
+				font-family: Arial;
+				
+			}
+
+			table.submenu2 {
+				margin:0 0 0 0;  	
+				width=160px;
+				text-align:center;
+				border-collapse:collapse;
+				font-family: Verdana;
+				
+			}
+				table.submenu2 td {  	
+				width=160px;
+				border-collapse:collapse;
+				font-family: Verdana;
+			}
+
+			.submenu2 {  
+ 				width=150;
+				border-collapse:collapse;
+				font-family: Verdana;
+			}
+
+			tr.judulsubmenu {  
+				font-size:11pt;
+				font-weight:bold;
+				font-family: Verdana;
+				background:#8C481F;
+				
+			}
+			td.judulsubmenu {
+				padding:4px;  
+ 				font-size:12px;
+				font-weight:bold;
+				font-family: Verdana;
+				letter-spacing:1px;
+				color:#FCFCFC;
+				border-bottom:2px solid #FFC000;
+			}
+			
+			a.datasubmenuganjil {  
+  				font-size:7pt;
+				font-family: Verdana;
+			}
+			a.datasubmenuganjil:link {  
+  				font-size:7pt;
+				font-family: Verdana;
+			}
+			a.datasubmenuganjil:visited {  
+  				font-size:7pt;
+				font-family: Verdana;
+			}
+			a.datasubmenuganjil:hover {  
+  				font-size:7pt;
+				font-family: Verdana;
+			}
+			a.datasubmenuganjil:active {  
+  				font-size:7pt;
+				font-family: Verdana;
+			}
+				
+			a.datasubmenugenap{  
+				font-family: Verdana;
+  				font-size:7pt;
+			}
+			a.datasubmenugenap:hover {  
+				font-family: Verdana;
+  				font-size:7pt;
+			}
+			a.datasubmenugenap:link {  
+				font-family: Verdana;
+  				font-size:7pt;
+			}
+			a.datasubmenugenap:visited {  
+				font-family: Verdana;
+  				font-size:7pt;
+			}
+			a.datasubmenugenap:active {  
+				font-family: Verdana;
+  				font-size:7pt;
+			}
+
+			tr.datasubmenuganjil {  
+				color: #000000; 
+				font-size:8pt;
+				background-image: url('".$root."gambar/bgsubmenuganjil2.jpg');
+			}
+				
+			tr.datasubmenugenap {  
+				color: #000000; 
+				background-image: url('".$root."gambar/bgsubmenugenap2.jpg');
+				font-size:8pt;
+			}
+			.submenu {
+ 				background:#8c1f1f  ;
+			}
+				td.submenu table {
+				padding:0 0 0 0;
+				margin: 0 0 32px 0;
+				/*background:url('".$root."css/polpaj/side_footer.jpg')  bottom no-repeat;*/
+				background:#f4dede;
+				}
+			table.submenudalam {  
+				padding-top: 4;				
+				padding-left: 4;				
+				padding-bottom: 4;				
+				padding-right: 4;				
+				width=150;
+				border-collapse:collapse;
+				font-family: Verdana;
+				font-size:8pt;
+			}
+			tr.datasubmenudalambesar {  
+				font-size:9pt;
+			}
+			tr.datasubmenudalamkecil {  
+				font-size:8pt;
+			}
+
+/************** End CSS untuk Sub Menu*******************************/
+
+/************** CSS untuk Form Isian Utama*******************************/
+
+			table.form {  
+				padding-top: 4;				
+				padding-left: 4;				
+				padding-bottom: 4;				
+				padding-right: 4;				
+				width=95%;
+				font-family: Arial;
+				font-size:9pt;
+			}
+			td.judulform {  
+				color: #000000; 
+				
+				width=25%;
+				nowrap;
+			}
+/************** End CSS untuk Form Isian Utama*******************************/
+
+/*********** maincontent *****************/
+.data {
+background:#fcfcfc url('".$root."css/polpaj/maincontent_bg-.jpg') ;
+}
+	.data h5{
+	 background:url('".$root."css/polpaj/h1_leftbg.jpg') left no-repeat ;
+	 font:bold 14px/24px Verdana,arial;
+	 text-indent:20px;
+		}
+/************ maincontent end **************/
+
+/************** CSS untuk Form Isian Tambahan*******************************/
+			table.form2 {  
+				padding-top: 1;				
+				padding-left: 1;				
+				padding-bottom: 1;				
+				padding-right: 1;				
+				width=95%;
+				font-family: Arial;
+				font-size:8pt;
+			}
+			tr.judulform2 {  
+				color: #000000; 
+				
+				font-weight:bold;
+				nowrap;
+			}
+			tr.dataform2genap {  
+				color: #000000; 
+				background-color: #eeeeee;
+				font-size:8pt;
+			}
+			tr.dataform2ganjil {  
+				color: #000000; 
+				background-color: #ffffff;
+				font-size:8pt;
+			}
+/************** End CSS untuk Form Isian Tambahan*******************************/
+
+/************** CSS untuk Tabel Data*******************************/
+
+			table.dataluar {  
+				padding-top: 1;				
+				padding-left: 1;				
+				padding-bottom: 1;				
+				padding-right: 1;				
+				width=95%;
+				font-family: Arial;
+				font-size:9pt;
+			}
+			table.data {  
+				padding-top: 3;				
+				padding-left: 3;				
+				padding-bottom: 3;				
+				padding-right: 3;				
+				width=95%;
+				font-family: Arial;
+				font-size:9pt;
+				border-size:1;
+			}
+			tr.juduldata {  
+				font-size:8pt;
+				font-weight:bold;
+				color:#ffffff;
+				background-color: #8C1F1F ;
+			}
+				tr.juduldata a{
+					color:#fff;}
+					tr.juduldata a:hover{ color:#FF9400;text-decoration:underline;}
+			
+			tr.dataganjil {  
+				color: #000000; 
+				background-color:#ccc;
+				font-size:8pt;
+			}
+				tr.dataganjil td{
+					padding:4px;}	
+			tr.datagenap {  
+				color: #000000; 
+				background-color: #eee;
+				font-size:8pt;
+			}
+				tr.datagenap td{
+					padding:4px;}	
+
+			tr.judulkolomkecil {  
+				font-size:5pt;
+				font-weight:bold;
+				color:#224466;
+				background-color: #bbbbdd ;
+			}
+			tr.dataganjilkecil {  
+				color: #000000; 
+				background-color: #eeeeff ;
+				font-size:5pt;
+			}
+				
+			tr.datagenapkecil {  
+				color: #000000; 
+				background-color: #ffffee;
+				font-size:5pt;
+			}
+
+
+
+
+/************** End CSS untuk Data*******************************/
+
+/************** CSS untuk Input, Tombol, dll*******************************/
+
+			.masukan {  
+				font-family: Arial, Helvetica, sans-serif; 
+				background-color: #FCFCFC;
+				border:1px solid #999999;
+				padding:0;
+				font-size:11px;
+				padding:2px;
+          }
+			.tombol {  
+				font-family: Arial, Helvetica, sans-serif; 
+				background-color: #eeeeee; 
+				padding:2px;
+				font-size:11px;
+          }
+/************** End CSS untuk Input, Tombol, dll*******************************/
+
+
+/************** CSS untuk Tabel Cetak*******************************/
+
+			table.judulmenucetak {  
+				background-color: #ffffff;
+				padding-top: 4;				
+				padding-left: 4;				
+				padding-bottom: 4;				
+				padding-right: 4;				
+				width=95%;
+				border-collapse:collapse;
+				font-family: Arial;
+				font-size:14pt;
+				font-weight:bold;
+			}
+			table.judulmenukecilcetak {  
+				background-color: #ffffff ;
+				padding-top: 4;				
+				padding-left: 4;				
+				padding-bottom: 4;				
+				padding-right: 4;				
+				width=95%;
+				border-collapse:collapse;
+				font-family: Arial;
+				font-size:12pt;
+				font-weight:bold;
+			}
+			table.datacetak {  
+				padding-top: 3;				
+				padding-left: 3;				
+				padding-bottom: 3;				
+				padding-right: 3;				
+ 				font-family: Arial;
+				font-size:9pt;
+ 				border-collapse:collapse;
+			}
+ 			tr.juduldatacetak {  
+				font-size:8pt;
+				font-weight:bold;
+				color:#000000;
+ 			}
+			
+			tr.dataganjilcetak {  
+				color: #000000; 
+				font-size:6pt;
+				
+ 			}
+				
+			tr.datagenapcetak {  
+				color: #000000; 
+				font-size:6pt;
+ 			}
+			a:link.cetak {  
+				color:#000000;
+			}
+			a:hover.cetak {  
+				color:#000000;
+			}
+			a:active.cetak {  
+				color:#000000;
+			}
+			a:visited.cetak {  
+				color:#000000;
+			}
+			td.cetakkecil {  
+ 				font-size:7pt;
+ 			}
+			
+			td.judulformcetak {  
+				color: #000000; 
+				background-color: #ffffff;
+				width=25%;
+				nowrap;
+			}
+
+/****************** Class Pesan ********************************************/
+			tr.pesanbaru {  color: #000000; background-color: #6699ff;font-size:8pt}
+			tr.pesanlama {  color: #000000; background-color: #eeeeee;font-size:8pt}
+			-->
+/****************** End Class Pesan ********************************************/
+
+/************** CSS untuk Form Diskusi*******************************/
+
+			table.headdiskusi {  
+				padding-top: 4;				
+				padding-left: 4;				
+				padding-bottom: 4;				
+				padding-right: 4;				
+				width=95%;
+				font-family: Arial;
+				font-size:9pt;
+				background-color: #ffeeff ;
+			}
+			body.diskusi {  position: static; background-color: #eeffff; 
+			background-position: center top; font-size: small; font-style: normal; 
+			font-weight: bolder; color: $warnateks; border: medium #FFFFFF solid; 
+			list-style-position: outside; list-style-type: circle;
+			margin-top:0;margin-left:0;margin-right:0;margin-bottom:0;
+			font-family:Verdana;
+			font-size:9pt;
+			}
+/************** End CSS untuk Form Diskusi*******************************/
+
+
+/************** CSS untuk Pooling Dll*******************************/
+			table.pooling {  
+				padding-top: 4;				
+				padding-left: 4;				
+				padding-bottom: 4;				
+				padding-right: 4;				
+				border-collapse:collapse;
+				font-family: Arial;
+				background-color: #eeeeff ;
+			}
+			
+			
+
+			</style>
+			
+			";
+
+?>

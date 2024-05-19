@@ -1,0 +1,43 @@
+/* CSS Document */
+
+
+#headerlayarsentuh {
+text-align:center;
+  }
+#headerlayarsentuh table tr td {
+  text-align:center;
+  }
+
+#loginlayarsentuh  {
+text-align:center;
+  }
+
+#loginlayarsentuh table {
+  font-size:30pt;
+  }
+
+#inputlayarsentuh {
+  font-size:50pt;
+}
+
+#menuts {
+  font-size:30pt;
+  width:450px;
+}
+
+#content table tr td {
+  font-size:16pt;
+  }
+
+#content  {
+text-align:center;
+  }
+
+#judulmenu table tr td {
+  font-size:30pt;
+ }
+
+
+
+body {
+ }

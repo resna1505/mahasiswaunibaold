@@ -1,0 +1,128 @@
+========== Ioncube_Decoder 1.1.40  LogFile ==========
+
+=========> S t a g e  0  -  Getting RawData (UnBase64-Raw.bin)
+
+Opening C:\AppServ\www\siakad\lain\array.php
+000003AF -> Start of ionCubeData...
+0000055C -> 000001AD Bytes read.
+IC_Base64_Marker: '4+oV' Decoding Base64->Bin...
+
+=========> S t a g e  1  -  Validating RawData
+
+ionCubeVersionType: 3CCC22E1 [Encrypted: 149FEC13]
+ioncube_Version_Type 3
+
+=========> S t a g e  2  -  Processing RawData
+
+RawBinData_Size: 000004EA
+FileSizeKey: 2395B9D5 (RawBinData_Size + 12321) Xor &H23958CDE
+Header_FileSizeKey: 2395B9D3
+Header_FileSizeKey and FileSizeKey are different! (Difference: 00000002)
+Note: RawBinData_Size calculate from Header_FileSizeKey is: 0000056C  (Difference: 00000082)
+Header_Size: 000000BE (InitKey for MT: 87FC4EB2)
+Adler32_CRC for 'IC_Raw[0004]..[00DC]' and calculated MATCH. CRC: A89F6E54
+
+=========> S t a g e  3  -  Extracting Header from RawData (->IC_Header.bin)
+
+
+=========> S t a g e  4  -  Interpreting IC_Header
+
+Minimum Loader Version: 00.00.00 (for ex. ioncube_loader_win_4.3.dll requires >0301010)
+VerData 0x00000003
+ObfuFlags 00000000 00000000
+
+ObfuFuncHashSeed: 
+Bytecode_XorKey: 92A764C5
+ -> The Encoder uses '0x92A764C5' to overwrite/delete the real bytecode key - since there is a LicenseFile(+enforceLicense) from which that value should be retrieved. (However don't worry we'll be able to calcuate that value if there is not LicFile. :)
+IncludeXorKey[should be 0xE9FC23B1]: E9FC23B1
+LicenseFile: lisensi.txt
+DisableCheckingOfLicenseRestrictions: 0
+LicensePassphrase: lisensi
+CustomErrCallbackHandler: 'ioncube_event_handler'
+Enable_auto_prepend_Append_file: 0
+Customised error messages entries: 0x00
+Include file protection entries: 0x00
+Adler32_CRC for '<?php //... ?>' and calculated MATCH. CRC: EB60391D
+IC_HeaderEx start: 0086
+IC_HeaderEx end: 00AE   IC_Header HeaderSize: 00BE
+
+=========> S t a g e  5  -  Interpreting IC_HeaderEx
+
+0001 <-IC_Type_Minor
+0005 <-IC_Type_Major
+The file [%s] was encoded with the PHP 5 ionCube Encoder, and requires PHP 5 to be installed.
+00000CE7 <-PhpFlags
+  0x0001  0001
+  0x0002  0002 
+  0x0004  0004 
+  0x0020  Allow run with untrusted server extensions
+  0x0040  PHP5_Body
+  0x0080  CmdBytesAreEncrypted
+  0x0400  EncryptStrings[KeyWord.c_Object] in memory during Compile& Execute
+  0x0800  ObfuscateStripLineNumbers
+
+IC Encoder Registration data(MemberID): 0x10050603  30754
+Calculate ByteCode_Key ('0x363432' + sum of the chars from LicensePassphrase): 00363729
+Overwrite ByteCode_Key to : 0x00363729
+Bytecode_MT_XorKey: 00363729
+Copy of IncludeXorKey in Header_MoreData: 0xE9FC23B1
+unknown Data: 8501A8C0 E3FC1B00 2690 00 00
+EvalTimeMin: 4/16/2012 8:10:00 AM   128330D1 '+0500DA46'=>4F8BD3D8 seconds since 1.1.1970
+EvalTimeMax: 4/16/2012 8:10:00 AM   4A8AF992 '+3D08A307'=>4F8BD3D8 seconds since 1.1.1970
+BodyStartOffset: 0x000000E4
+
+=========> S t a g e  6  -  Extracting & Inflating IC_body from RawData (->IC_body.bin)
+
+000000E8  Body_MT_Seed: 4314F6EC
+000000EC  Bytecode_MT_Seed: A52ED680
+
+=========> S t a g e  7  -  Reading IC_body.bin
+
+
+=========> S t a g e  8  -  Read function body data
+
+Reading Body
+00000008 -> 00000004
+S2[Fixed Size 0x70]:
+0000007A ->  00000002
+ Skipped3 ->  00000000
+ FuncNameStart ->  00000000 FFFFFFFF
+ CmdData ->  00000000
+ Args ->  00000000
+ ArgsMin ->  00000000
+ php4Extra ->  025408E8 00000000 022311F8 0245D790 00000002 00000002
+ Skipped1 ->  00000000 00000000 00000000
+ PHPFileNamePtr ->  FFFFFFFF
+ Php5-O1  00000000
+ Php5-O1Count  00000000 00000000 00000000 00000000 00000000 0230F0B8 0041C750 0041C890 00000000 00000000
+ 
+00000079 -> FunctionName: abstract  static function {MainFunction}
+ 
+00000082 -> 00000002<-CmdCount
+byteCmds[Elementsize=0x2] Elements: 00000002
+Command(Encrypted)
+------------------
+02F7
+0095
+CmdParams[Elementsize=0x14] Elements: 00000001
+Type      Op1       Op2       Flags5    Flags
+---------------------------------------------
+00000001   00000001   00000038   00000002   00120101
+StringData [00000002]
+000000A8 -> C0 DE 
+Ро
+Length of unprocessed data: 00000004
+
+=========> S t a g e  9  -  Interpreting IC_body/ByteCode
+
+#0000: 0x3E ZEND_RETURN   LineNo: 0x0000  Flags: 0x02()
+op1   : 01->CONST   00000001 00000038  02  01->LONG   01->ref 0012
+====================================================================
+Return (1);
+______________________________________________________________________
+#0001: 0x95 ZEND_HANDLE_EXCEPTION   LineNo: 0x0000  Flags: 0x00()
+______________________________________________________________________
+FunctionsCount: 0000
+Classes: 0000
+File sucessfully processes!
+

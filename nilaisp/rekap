@@ -1,0 +1,164 @@
+			$q="
+				SELECT DISTINCT pengambilanmk.IDMAKUL,
+				makul.NAMA,makul.SKS,
+				makul.SEMESTER 
+				FROM pengambilanmk,makul 
+				WHERE 
+				pengambilanmk.IDMAKUL=makul.ID
+				AND IDMAHASISWA='$d[ID]'
+				ORDER BY makul.SEMESTER,IDMAKUL
+			";
+			$hn=mysqli_query($koneksi,$q);
+			if (sqlnumrows($hn)>0) {
+ 				$semlama="";
+				while ($d2=sqlfetcharray($hn)) {
+					unset($kp);
+					unset($kon);
+ 					
+					unset($d2[TAHUN]);
+					unset($d2[KELAS]);
+					unset($ddmk);
+	 				if ($nilaidiambil==1) {
+						$q="SELECT 
+							pengambilanmk.TAHUN,
+							pengambilanmk.KELAS
+							FROM pengambilanmk
+							WHERE
+							IDMAHASISWA='$d[ID]'
+							AND IDMAKUL='$d2[IDMAKUL]'
+							ORDER BY TAHUN DESC,SEMESTER DESC
+							LIMIT 0,1
+						";
+						$hmk=mysqli_query($koneksi,$q);
+						if (sqlnumrows($hmk)>0) {
+							$dmk=sqlfetcharray($hmk);
+							$ddmk[]=$dmk;
+						}
+					} else {
+						$q="SELECT 
+							pengambilanmk.TAHUN,
+							pengambilanmk.KELAS
+							FROM pengambilanmk
+							WHERE
+							IDMAHASISWA='$d[ID]'
+							AND IDMAKUL='$d2[IDMAKUL]'
+							ORDER BY TAHUN DESC,SEMESTER DESC
+							 
+						";
+						$hmk=mysqli_query($koneksi,$q);
+						if (sqlnumrows($hmk)>0) {
+							while ($dmk=sqlfetcharray($hmk)) {
+								$ddmk[]=$dmk;
+							}
+	 					}
+					}
+				
+////////////////////////////////////////////////////////////////////////////////////////////
+					$nilai="";
+					$total="";
+					$bobot="";
+					$nilaiakhir=$nilaiakhirdicari=
+					$totalmax=$totalmaxdicari=
+					$bobotmax=$bobotmaxdicari=
+					$simbolmax=$simbolmaxdicari=
+					"";
+					if (is_array($ddmk)) {
+						foreach ($ddmk as $kmk=>$vmk) {
+							$bobotmax=0;
+							$totalmax=0;
+							$nilaiakhir=0;
+							$d2[TAHUN]=$vmk[TAHUN];
+							$d2[KELAS]=$vmk[KELAS];
+							$q="
+								SELECT IDKOMPONEN,NAMA,BOBOT FROM komponen
+								WHERE 
+								IDMAKUL='$d2[IDMAKUL]'
+								AND TAHUN='$d2[TAHUN]'
+								AND KELAS='$d2[KELAS]'
+							";
+							$hkom=mysqli_query($koneksi,$q);
+							if (sqlnumrows($hkom)<=0) {
+								$nilai="";
+								$bobot="";
+								$total="";
+							} else {
+								while ($dkom=sqlfetcharray($hkom)) {
+									$kp[]=$dkom;
+				 				}		
+				
+			
+								$q="
+									SELECT SIMBOL,NILAI,SYARAT FROM konversi
+									WHERE 
+									IDMAKUL='$d2[IDMAKUL]'
+									AND TAHUN='$d2[TAHUN]'
+									AND KELAS='$d2[KELAS]'
+									ORDER BY NILAI DESC
+								";
+						
+								$hkon=mysqli_query($koneksi,$q);
+								if (sqlnumrows($hkon)>0) {
+									while ($dkon=sqlfetcharray($hkon)) {
+										$kon[]=$dkon;
+						 			}		
+								}
+						
+								 $q="
+									SELECT IDKOMPONEN,NILAI FROM nilai
+									WHERE 
+									IDMAKUL='$d2[IDMAKUL]'
+									AND TAHUN='$d2[TAHUN]'
+									AND KELAS='$d2[KELAS]'
+									AND IDMAHASISWA='$d[ID]'
+								";
+								$hnilai=mysqli_query($koneksi,$q);
+								unset($datanilai);
+								if (sqlnumrows($hnilai)>0) {
+									while ($dnilai=sqlfetcharray($hnilai)) {
+										$datanilai[$dnilai[IDKOMPONEN]]=$dnilai[NILAI];
+									}
+								}
+								$nilaiakhir=0;
+								foreach ($kp as $k=>$v) {
+									$nilaiakhir+=($datanilai[$v[IDKOMPONEN]]*$v[BOBOT]/100);
+								}
+								
+								if (is_array($kon)) {
+									foreach ($kon as $k=>$v) {
+										if ($nilaiakhir>=$v[SYARAT]) {
+											$totalmax=$v[NILAI]*$d2[SKS];
+											$bobotmax=$v[NILAI];
+											$simbolmax=$v[SIMBOL];
+	 										break;
+										}
+									}
+								}
+	
+								if ($totalmax > $totalmaxdicari) {
+									$totalmaxdicari=$totalmax;
+									$bobotmaxdicari=$bobotmax;
+									$simbolmaxdicari=$simbolmax;
+									$nilaiakhirdicari=$nilaiakhir;
+								} 	
+							
+							}
+						}		
+						$nilaiakhir=$nilaiakhirdicari;
+						$totalmax=$totalmaxdicari;
+						$bobotmax=$bobotmaxdicari;
+						$simbolmax=$simbolmaxdicari;
+////////////////////////////////////////////////////////////////////////////////////////							
+							
+						$totalnilaiakhir+=$nilaiakhir;
+						 
+						$nilai=$simbolmax;
+						$bobot=number_format($bobotmax,2,'.',',');
+						$total=number_format($totalmax,2,'.',',');
+					 	$totals[$d2[SEMESTER]]+=$totalmax;
+					 	$totalsemua+=$totalmax;
+	 				}
+					$bobots[$d2[SEMESTER]]+=$d2[SKS];
+					$bobotsemua+=$d2[SKS];
+			
+				}
+ 			}

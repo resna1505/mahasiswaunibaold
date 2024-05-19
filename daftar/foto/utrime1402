@@ -1,0 +1,74 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SIKAD Login</title>
+  <link rel="stylesheet" href="tampilan/login_bank_pmb/lib/login.css">
+  <link rel="shortcut icon" href="images/favicon.png">
+  <script src="tampilan/login_bank_pmb/lib/jquery-1.7.1.min.js"></script>
+  <!--<script src="js/jquery.spinner.js"></script>-->
+  <!--[if lt IE 9]>
+  <![endif]-->
+    <!---FadeIn Effect, Validation and Spinner-->
+  <script>
+    $(document).ready(function () {
+       $('div.wrapper').hide();
+        $('div.wrapper').fadeIn(1200);
+        $('#lg-form').validate();
+        $('.submit').click(function() {
+        var $this = $(this);
+        $this.spinner();
+        setTimeout(function() {
+                $this.spinner('remove');
+        }, 1000);
+       });
+    });
+  </script>
+
+</head>
+<body>
+	<div class="wrapper">
+    		 <div class="logo">
+	 	<h1>Login PMB</h1>
+	 </div>
+   <div class="lg-body">
+     <div class="inner">
+       <div id="lg-head">
+         <p>Untuk Masuk ke Halaman ini Silahkan Melakukan Login.</p>
+         <div class="separator"></div>
+       </div>
+       <div class="login">
+         <form id="lg-form" method="post" name=log action='/siakad/loginpmb.php'>
+           <fieldset>
+              <ul>
+                 <li id="usr-field">
+                  <input class="input required" name="iduser" type="text" size="26" minlength ="1" placeholder="Username..." />
+                 </li>
+                 <li id="psw-field">
+                  <input class="input required" name="password" type="password" size="26" minlength="1" placeholder="Password..." />
+                 </li>
+                 <li>
+                  <input name="aksi" class="submit" type="submit" value="Login" onClick="return teslogin(log);"/>
+                  <input class="submit" type="reset" value="Reset"/>
+                 </li>
+              </ul>
+           </fieldset>
+          </form>
+          
+          <span id="lost-psw">
+            <a href='/siakad/loginpmb.php?pilihan=lupa'>Lupa password? </a>          </span>
+          
+        </div>
+     </div>
+    </div>
+    <!--
+    <div id="login-msg">
+      <p class="font-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <p>
+    </div>
+    -->
+	</div>
+</body>
+</html>
+

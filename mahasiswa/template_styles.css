@@ -1,0 +1,341 @@
+/*
+======================
+General styles
+Template 1 styles
+Template 2 styles
+Template 3 styles
+======================
+*/
+
+
+/*
+======================
+General styles
+======================
+*/
+
+* {margin:0px;padding:0px;}		
+/*body {font-family:trebuchet ms;font-size:11px;color:#000000;}*/
+td {padding:0px;margin:0px;height:10px;font-size:11px;color:#000000;}	
+tr {height:17px;}
+td {background:none;}	
+.ganjil {background:none;}
+.genap {background:none;}	
+.float_card {list-style:none;}	
+.float_card a {margin-left:140px;font-size:16px;}		
+.float_card li {display:block;float:left;}
+
+
+
+/*
+======================
+Template 1 styles
+======================
+*/	
+	.boxtitle_t1 {
+		display:inline-block;
+		width:332px;
+		background:#132656;
+		color:#fff;
+		}
+		
+	.template1_line {
+		border:1px solid #000000;
+		position:relative;
+		left:0px;
+		top:2px;
+		}	
+		
+	.logo_t1 {
+		float:left;
+		margin-left:5px;
+		margin-top:2px;
+		margin-right:20px;
+		width:45px;
+		}
+		
+	tbody_t1 td {
+		padding-left:5px;
+		padding:0px;
+		margin:0px;
+		}
+		
+	.logoright_t1 {
+		float:left;
+		margin-top:2px;
+		}
+
+		
+	.title_t1 {
+		float:left;
+		margin-top:4px;
+		width:255px;
+		text-align:center;
+		font-size:13px;
+		}
+	
+	.address_t1 {
+		float:left;
+		width:255px;
+		text-align:center;
+		padding-bottom:5px;
+		}
+		
+	#cardwrap_t1 {
+		position:relative;
+		margin:10px;
+		width:332px;
+		height:240px;
+		border:1px solid #444444;
+		background:#f6f5b6;
+		font-size:11px;
+		}
+		
+	.titlecard_t1 {
+		text-align:center;
+		margin-top:5px;
+		font-size:15px;
+		}
+		
+	.pict_t1 {
+		position:absolute;
+		top:115px;
+		left:10px;
+		border:1px solid black;
+		}
+		
+	.barcoy_t1 {
+		margin:20px 0 0 2px;
+		position:absolute;
+		float:left;
+		bottom:10px;
+		left:0px;
+		}
+		
+	.signature_t1 {
+		position:absolute;
+		bottom:6px;
+		right:10px;
+		margin-right:10px;
+		text-align:center;
+		}
+		
+	.signature_t1 img {
+		position:relative;
+		top:0px;
+		}
+		
+/*
+======================
+Template 2 styles
+======================
+*/
+
+.template2_line {
+		border:1px solid #6798db;
+		position:relative;
+		left:0px;
+		top:0px;
+		}
+		
+	#template2_cardwrap {
+		position:relative;
+		margin:10px;
+		width:332px;
+		height:240px;
+		border:1px solid #032b62;
+		background:url(foldertemplate2/bgcard.jpg) no-repeat;
+		}
+		
+	.template2_boxtitle {
+		display:inline-block;
+		width:332px;
+		height:60px;
+		}	
+		
+	.template2_logo {
+		float:left;
+		margin-right:8px;
+		margin-top:2px;
+		margin-left:5px;
+		}
+		
+	.template2_bgbody {
+		padding:7px 0;
+		font-weight:bold;
+		text-shadow: 0px 1px 1px rgba(5,26,59, 30);
+		}
+		
+	.template2_bgbody td {
+		color:#fff;
+		}	
+		
+	.template2_logoright {
+		float:left;
+		margin-top:2px;
+		}
+
+		
+	.template2_title {
+		margin:auto;
+		font-size:14px;
+		color:#fff;
+		width:290px;
+		text-shadow: 0px 1px 1px rgba(5,26,59, 30);
+		text-align:center;
+		}
+		
+	.template2_titlecard {
+		text-align:center;
+		margin-top:10px;
+		color:#fff;
+		text-shadow: 0px 1px 1px rgba(5,26,59, 30);
+		font-size:15px;
+		
+		}
+		
+	.template2_pict {
+		position:absolute;
+		top:79px;
+		right:10px;
+		border:1px solid #032b62;
+		}
+		
+	.template2_barcode {
+		position:absolute;
+		right:10px;
+		bottom:13px;
+		}
+		
+	.template2_bgfooter {
+		width:332px;
+		height:60px;
+		display:inline-block;
+		padding:5px 0px;
+		}
+		
+	.template2_signature {
+		position:absolute;
+		bottom:5px;
+		left:10px;
+		text-align:center;
+		}
+		
+		
+/*
+======================
+Template 3 styles
+======================
+*/
+
+
+.template3_line {
+		border:1px solid #6798db;
+		position:relative;
+		left:0px;
+		top:0px;
+		}
+		
+	#template3_cardwrap {
+		position:relative;
+		margin:10px;
+		width:332px;
+		height:240px;
+		border:1px solid #032b62;
+		background:url(foldertemplate3/bgcard.jpg) no-repeat;
+		}
+		
+	.template3_headercard {
+		height:25px;
+		}
+		
+	.template3_headercard h2 {
+		text-align:center;
+		margin-top:5px;
+		width:270px;
+		color:#fff;
+		font-size:14px;
+		text-shadow: 0px 1px 1px rgba(5,26,59, 30);
+		}
+		
+	.template3_headercard p {
+		text-align:center;
+		color:#fff;
+		text-shadow: 0px 1px 1px rgba(5,26,59, 30);
+		}	
+		
+	.template3_boxtitle {
+		display:inline-block;
+		width:332px;
+		height:60px;
+		}	
+		
+	.template3_logo {
+		float:right;
+		margin-left:5px;
+		margin-right:10px;
+		}
+		
+	.template3_bgbody {
+		color:#05295b;
+		font-weight:bold;
+		}
+		
+		
+	.template3_logoright {
+		float:left;
+		margin-top:2px;
+		}
+
+		
+	.template3_title {
+		margin:auto;
+		text-align:center;
+		font-size:16px;
+		color:#fff;
+		text-shadow: 0px 1px 1px rgba(5,26,59, 30);
+		}
+		
+	.template3_titlecard {
+		text-align:center;
+		margin-top:15px;
+		color:#fff;
+		text-shadow: 0px 1px 1px rgba(5,26,59, 30);
+		}
+		
+	.template3_pict {
+		position:absolute;
+		top:60px;
+		right:10px;
+		border:1px solid #032b62;
+		}
+		
+	.template3_student {
+		position:absolute;
+		top:190px;
+		right:12px;
+		color:#0a3167;
+		}	
+		
+	.template3_barcode {
+		margin:19px 0 0 2px;
+		position:absolute;
+		bottom:10px;
+		left:0px;
+		}
+		
+	.template3_signature {
+		position:absolute;
+		bottom:3px;
+		right:10px;
+		margin-right:10px;
+		text-align:center;
+		}
+		
+	.template3_bgfooter {
+		width:332px;
+		margin-top:8px;
+		display:inline-block;
+		padding:5px 0px;
+		}
+		

@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	background-color: #064e6e; /* Old browsers */
+	background-image: url(../../images/stars.png);
+	min-height: 100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	overflow:visible;
+	margin:0px;
+	padding:0px;
+}
+
+#banner {
+	width:100%;
+}
+
+.bgleft {
+	float:left;
+	top:-10px;
+	position:relative;
+	z-index:-10;
+}
+
+.bgright {
+	float:right;
+	top:-10px;
+	position:relative;
+	z-index:-10;
+}
+
+#attribute {
+	width:450px;
+	height:100px;
+	padding-top:10px;
+	margin:10px auto;
+	position:relative;
+}
+
+#attribute img {
+	width:90px;
+	height:90px;
+	float:left;
+	position:absolute;
+	left:18px;
+}
+
+.title {
+	float:left;
+	margin-left:10px;
+	color:#fff;
+	text-align:left;
+	font-size:16px;
+	position:absolute;
+	left:110px;
+	top:7px;
+	text-shadow: 1px 1px 0px rgba(23,24,26,.5);
+}
+
+.instancename {
+	float:left;
+	margin-left:10px;
+	color:#fff;
+	text-align:left;
+	font-size:16px;
+	position:absolute;
+	left:110px;
+	top:35px;
+	text-shadow: 1px 1px 0px rgba(23,24,26,.5);
+	}
+
+.address {
+	float:left;
+	margin-left:10px;
+	color:#ffb60b;
+	font-size:14px;
+	position:absolute;
+	left:110px;
+	top:65px;
+	text-shadow: 1px 1px 0px rgba(23,24,26,.5);
+}
+
+#formwrap {
+	width:500px;
+	margin:15px auto;
+}
+
+#formtouchscreen {
+	margin:0px;
+	height:400px;
+	width:500px;
+	background:url(../images/bgformtouchscreen.jpg) repeat-x;
+	background-color:#01293b;
+	position:relative;
+	border:1px solid #38a7d9;
+	border-bottom:1px solid #0a577a;
+	border-top:1px solid #9be0ff;
+}
+
+.backbutton {
+	height:99px;
+	width:94px;
+	position:absolute;
+	text-decoration:none;
+	bottom:-8px;
+	left:-120px;
+	background:url(../images/back.png) no-repeat -100px 0px;
+}
+
+.backbutton:hover{
+	height:99px;
+	width:94px;
+	position:absolute;
+	background:url(../images/back.png) no-repeat 0px 0px;
+}
+
+#spacer {
+	width:500px;
+	height:30px;
+	margin:0px;
+	margin:auto;
+	background:url(../images/shadowform.png) no-repeat;
+}
+
+/* form 2 */
+
+#formtouchscreen .firsttitle {
+	color:#002c40;
+	font-size:13px;
+	font-weight:bold;
+	margin:20px 0 0 20px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+#formtouchscreen h2{
+	width:458px;
+	margin:10px 0 0 20px;
+	padding-bottom:8px;		
+	color:#fff;
+	font-size:34px;
+	position:absolute;
+	left:0px;
+	top:25px;
+	background:url(../images/touchscreendevider.jpg) repeat-x bottom center;
+}	
+					
+#formtouchscreen fieldset{
+	margin-top:100px;
+	position:absolute;
+	left:85px;
+	border:none;
+}
+		
+#formtouchscreen .texttopform	 {
+	width:300px;
+	margin-bottom:15px;
+	color:#ffb60b;
+}
+
+#formtouchscreen .texttopform b {
+	color:#fff;
+	position:absolute;
+	left:-3px;
+}
+
+
+#formtouchscreen p{
+	margin:.5em 10px;
+}	
+
+#formtouchscreen label{
+	display:block;
+	margin-bottom:5px;
+	color:#fff;
+	font-size:15px;
+}
+	
+#formtouchscreen .keyboardInput, #form2 {		
+	width:290px;
+	background: url(../images/bgform2.jpg) repeat-x;
+	padding:10px 8px;
+	border:1px solid #fff;
+}	
+
+.keyboardInputInitiator {
+	position:relative;
+	text-decoration:none;
+	top:-2px;
+	left:-45px;
+	border:none;
+}
+							
+.submit { 
+		margin:10px 0 0 10px;
+		width:91px;
+		height:35px;
+		background:url(../images/buttonTS.png) transparent no-repeat;
+		background-position:0px 0px;
+		text-align:center;
+		font-weight:bold;
+		padding-bottom:2px;
+		color:#2a2a2a;
+		cursor:pointer;
+		text-shadow: 0px 1px 2px rgba(251,176,9, 30);
+		border:none;
+}
+	
+.submit:hover {
+	background:url(../images/buttonTS.png) no-repeat;
+	background-position:0px -34px;
+}		
+
+/* // form 2 */

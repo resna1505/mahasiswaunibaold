@@ -1,0 +1,325 @@
+========== Ioncube_Decoder 1.1.40  LogFile ==========
+
+=========> S t a g e  0  -  Getting RawData (UnBase64-Raw.bin)
+
+Opening C:\AppServ\www\siakad\lain\cetakpimpinan.php
+000003AF -> Start of ionCubeData...
+00000712 -> 00000363 Bytes read.
+IC_Base64_Marker: '4+oV' Decoding Base64->Bin...
+
+=========> S t a g e  1  -  Validating RawData
+
+ionCubeVersionType: 3CCC22E1 [Encrypted: 149FEC13]
+ioncube_Version_Type 3
+
+=========> S t a g e  2  -  Processing RawData
+
+RawBinData_Size: 0000062F
+FileSizeKey: 2395BA8E (RawBinData_Size + 12321) Xor &H23958CDE
+Header_FileSizeKey: 2395BA8C
+Header_FileSizeKey and FileSizeKey are different! (Difference: 00000002)
+Note: RawBinData_Size calculate from Header_FileSizeKey is: 000006B5  (Difference: 00000086)
+Header_Size: 000000BE (InitKey for MT: AACF9036)
+Adler32_CRC for 'IC_Raw[0004]..[00DD]' and calculated MATCH. CRC: 519B6AE8
+
+=========> S t a g e  3  -  Extracting Header from RawData (->IC_Header.bin)
+
+
+=========> S t a g e  4  -  Interpreting IC_Header
+
+Minimum Loader Version: 00.00.00 (for ex. ioncube_loader_win_4.3.dll requires >0301010)
+VerData 0x00000003
+ObfuFlags 00000000 00000000
+
+ObfuFuncHashSeed: 
+Bytecode_XorKey: 92A764C5
+ -> The Encoder uses '0x92A764C5' to overwrite/delete the real bytecode key - since there is a LicenseFile(+enforceLicense) from which that value should be retrieved. (However don't worry we'll be able to calcuate that value if there is not LicFile. :)
+IncludeXorKey[should be 0xE9FC23B1]: E9FC23B1
+LicenseFile: lisensi.txt
+DisableCheckingOfLicenseRestrictions: 0
+LicensePassphrase: lisensi
+CustomErrCallbackHandler: 'ioncube_event_handler'
+Enable_auto_prepend_Append_file: 0
+Customised error messages entries: 0x00
+Include file protection entries: 0x00
+Adler32_CRC for '<?php //... ?>' and calculated MATCH. CRC: EB60391D
+IC_HeaderEx start: 0086
+IC_HeaderEx end: 00AE   IC_Header HeaderSize: 00BE
+
+=========> S t a g e  5  -  Interpreting IC_HeaderEx
+
+0001 <-IC_Type_Minor
+0005 <-IC_Type_Major
+The file [%s] was encoded with the PHP 5 ionCube Encoder, and requires PHP 5 to be installed.
+00000CE7 <-PhpFlags
+  0x0001  0001
+  0x0002  0002 
+  0x0004  0004 
+  0x0020  Allow run with untrusted server extensions
+  0x0040  PHP5_Body
+  0x0080  CmdBytesAreEncrypted
+  0x0400  EncryptStrings[KeyWord.c_Object] in memory during Compile& Execute
+  0x0800  ObfuscateStripLineNumbers
+
+IC Encoder Registration data(MemberID): 0x10050603  30754
+Calculate ByteCode_Key ('0x363432' + sum of the chars from LicensePassphrase): 00363729
+Overwrite ByteCode_Key to : 0x00363729
+Bytecode_MT_XorKey: 00363729
+Copy of IncludeXorKey in Header_MoreData: 0xE9FC23B1
+unknown Data: 8501A8C0 E3FC1B00 2690 00 00
+EvalTimeMin: 4/16/2012 8:10:00 AM   128330D1 '+0500DA46'=>4F8BD3D8 seconds since 1.1.1970
+EvalTimeMax: 4/16/2012 8:10:00 AM   4A8AF992 '+3D08A307'=>4F8BD3D8 seconds since 1.1.1970
+BodyStartOffset: 0x000000E5
+
+=========> S t a g e  6  -  Extracting & Inflating IC_body from RawData (->IC_body.bin)
+
+000000E9  Body_MT_Seed: 558481F2
+000000ED  Bytecode_MT_Seed: A6201680
+
+=========> S t a g e  7  -  Reading IC_body.bin
+
+
+=========> S t a g e  8  -  Read function body data
+
+Reading Body
+00000008 -> 00000002
+S2[Fixed Size 0x70]:
+0000007A ->  00006202
+ Skipped3 ->  00000000
+ FuncNameStart ->  00000000 0245E630
+ CmdData ->  00000000
+ Args ->  00000000
+ ArgsMin ->  00000000
+ php4Extra ->  02490A20 00000053 02200580 024996F0 00000013 00000013
+ Skipped1 ->  00000010 00000000 00000000
+ PHPFileNamePtr ->  FFFFFFFF
+ Php5-O1  00000000
+ Php5-O1Count  00000000 00000000 00000000 00000000 633D0000 02490F30 203E2072 200A0D20 00000000 00000000
+ 
+00000079 -> FunctionName:  function {MainFunction}
+ 
+00000082 -> 00000013<-CmdCount
+byteCmds[Elementsize=0x2] Elements: 00000013
+Command(Encrypted)
+------------------
+07C7
+0704
+071D
+07EC
+0712
+0716
+079F
+079C
+0431
+0145
+07EB
+070E
+070F
+0731
+0786
+0726
+0752
+024B
+0095
+CmdParams[Elementsize=0x14] Elements: 00000030
+Type      Op1       Op2       Flags5    Flags
+---------------------------------------------
+00000004   00000000   00000000   00000000   00000000
+00000001   00000002   00000004   00000002   00420103
+00000008   00000000   00000001   00000000   00000000
+00000004   00000018   00000001   00000000   00000000
+00000004   00000000   00000010   00000000   00000000
+00000001   00000008   00000003   00000002   00420103
+00000004   00000030   00000000   00000000   00000000
+00000001   0000000C   00000004   00000002   00420103
+00000008   00000000   00000001   00000000   00000000
+00000002   00000048   00000000   00000000   00000000
+00000004   00000030   00000010   00000000   00000000
+00000001   00000012   0000000C   00000002   00420103
+00000004   00000060   00000001   00000000   00000000
+00000002   00000048   00000000   00000000   00000000
+00000008   00000002   00000000   00000000   00000000
+00000004   00000078   00000000   00000000   00000000
+00000001   00000020   00000004   00000002   00420103
+00000008   00000000   00000001   00000000   00000000
+00000002   00000090   00000000   00000000   00000000
+00000004   00000078   00000010   00000000   00000000
+00000001   00000026   0000000A   00000002   00420103
+00000004   000000A8   00000001   00000000   00000000
+00000002   00000090   00000000   00000000   00000000
+00000008   00000002   00000000   00000000   00000000
+00000001   00000032   0000000E   00000002   00420103
+00000004   000000C0   00000001   00000000   00000000
+00000004   000000F0   00000000   00000000   00000000
+00000001   00000042   00000004   00000002   00420103
+00000008   00000000   00000001   00000000   00000000
+00000004   00000108   00000000   00000000   00000000
+00000004   000000F0   00000010   00000000   00000000
+00000001   00000048   00000005   00000002   00420103
+00000004   000000D8   00000000   00000000   00000000
+00000001   0000004E   00000005   00000002   00420103
+00000008   00000000   00000001   00000000   00000000
+00000004   00000120   00000001   00000000   00000000
+00000004   000000D8   00000010   00000000   00000000
+00000004   00000108   00000000   00000000   00000000
+00000004   00000138   00000000   00000000   00000000
+00000001   00000054   00000006   00000002   00420103
+00000008   00000000   00000001   00000000   00000000
+00000004   00000150   00000001   00000000   00000000
+00000004   00000138   00000010   00000000   00000000
+00000001   0000005C   00000014   00000002   00420103
+00000004   00000168   00000001   00000000   00000000
+00000001   00000072   00000011   00000002   00420103
+00000008   00000002   00000000   00000000   00000000
+00000001   00000001   00000038   00000002   00120101
+StringData [00000084]
+000004F8 -> C0 DE 72 6F 6F 74 00 00 2E 2E 2F 00 72 6F 6F 74 00 00 73 65 73 69 75 73 65 72 2E 70 68 70 00 00 72 6F 6F 74 00 00 68 65 61 64 65 72 2E 70 68 70 00 00 70 72 69 6E 74 68 74 6D 6C 63 65 74 61 6B 00 00 61 6B 73 69 00 00 63 65 74 61 6B 00 63 65 74 61 6B 00 62 6F 72 64 65 72 00 00 20 62 6F 72 64 65 72 3D 31 20 77 69 64 74 68 3D 36 30 30 20 00 00 70 69 6D 70 69 6E 61 6E 63 65 74 61 6B 2E 70 68 70 00 
+ÀÞroot..../.root..sesiuser.php..root..header.php..printhtmlcetak..aksi..cetak.cetak.border.. border=1 width=600 ..pimpinancetak.php.
+Length of unprocessed data: 00000004
+
+=========> S t a g e  9  -  Interpreting IC_body/ByteCode
+
+#0000: 0x53 ZEND_FETCH_W   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000000 00000000  00  00->NULL   00->val 0000
+op1   : 01->CONST   00000002 00000004  02  03->STRING 01->ref 0042
+        KeyWord: root
+op2   : 08->UNUSED  00000000 00000001  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$root
+______________________________________________________________________
+#0001: 0x26 ZEND_ASSIGN   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000018 00000001  00  00->NULL   00->val 0000
+op1   : 04->VAR     00000000 00000010  00  00->NULL   00->val 0000
+op2   : 01->CONST   00000008 00000003  02  03->STRING 01->ref 0042
+        KeyWord: ../
+====================================================================
+$root="../";
+______________________________________________________________________
+#0002: 0x50 ZEND_FETCH_R   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000030 00000000  00  00->NULL   00->val 0000
+op1   : 01->CONST   0000000C 00000004  02  03->STRING 01->ref 0042
+        KeyWord: root
+op2   : 08->UNUSED  00000000 00000001  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$root
+______________________________________________________________________
+#0003: 0x08 ZEND_CONCAT   LineNo: 0x0000  Flags: 0x07()
+result: 02->TMP_VAR 00000048 00000000  00  00->NULL   00->val 0000
+op1   : 04->VAR     00000030 00000010  00  00->NULL   00->val 0000
+op2   : 01->CONST   00000012 0000000C  02  03->STRING 01->ref 0042
+        KeyWord: sesiuser.php
+----------------------------------------------------------------
+[1] '$root."sesiuser.php"
+______________________________________________________________________
+#0004: 0x49 ZEND_INCLUDE_OR_EVAL   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000060 00000001  00  00->NULL   00->val 0000
+op1   : 02->TMP_VAR 00000048 00000000  00  00->NULL   00->val 0000
+op2   : 08->UNUSED  00000002 00000000  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$root."sesiuser.php"
+Correcting Stack error...
+====================================================================
+$root."sesiuser.php";
+______________________________________________________________________
+#0005: 0x50 ZEND_FETCH_R   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000078 00000000  00  00->NULL   00->val 0000
+op1   : 01->CONST   00000020 00000004  02  03->STRING 01->ref 0042
+        KeyWord: root
+op2   : 08->UNUSED  00000000 00000001  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$root
+______________________________________________________________________
+#0006: 0x08 ZEND_CONCAT   LineNo: 0x0000  Flags: 0x07()
+result: 02->TMP_VAR 00000090 00000000  00  00->NULL   00->val 0000
+op1   : 04->VAR     00000078 00000010  00  00->NULL   00->val 0000
+op2   : 01->CONST   00000026 0000000A  02  03->STRING 01->ref 0042
+        KeyWord: header.php
+----------------------------------------------------------------
+[1] '$root."header.php"
+______________________________________________________________________
+#0007: 0x49 ZEND_INCLUDE_OR_EVAL   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     000000A8 00000001  00  00->NULL   00->val 0000
+op1   : 02->TMP_VAR 00000090 00000000  00  00->NULL   00->val 0000
+op2   : 08->UNUSED  00000002 00000000  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$root."header.php"
+Correcting Stack error...
+====================================================================
+$root."header.php";
+______________________________________________________________________
+#0008: 0x3B ZEND_INIT_FCALL_BY_NAME   LineNo: 0x0000  Flags: 0x04()
+op2   : 01->CONST   00000032 0000000E  02  03->STRING 01->ref 0042
+        KeyWord: printhtmlcetak
+----------------------------------------------------------------
+[1] 'printhtmlcetak
+______________________________________________________________________
+#0009: 0x3D ZEND_DO_FCALL_BY_NAME   LineNo: 0x0000  Flags: 0x01()
+result: 04->VAR     000000C0 00000001  00  00->NULL   00->val 0000
+====================================================================
+printhtmlcetak();
+______________________________________________________________________
+#000A: 0x53 ZEND_FETCH_W   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     000000F0 00000000  00  00->NULL   00->val 0000
+op1   : 01->CONST   00000042 00000004  02  03->STRING 01->ref 0042
+        KeyWord: aksi
+op2   : 08->UNUSED  00000000 00000001  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$aksi
+______________________________________________________________________
+#000B: 0x26 ZEND_ASSIGN   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000108 00000000  00  00->NULL   00->val 0000
+op1   : 04->VAR     000000F0 00000010  00  00->NULL   00->val 0000
+op2   : 01->CONST   00000048 00000005  02  03->STRING 01->ref 0042
+        KeyWord: cetak
+----------------------------------------------------------------
+[1] '$aksi="cetak"
+______________________________________________________________________
+#000C: 0x53 ZEND_FETCH_W   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     000000D8 00000000  00  00->NULL   00->val 0000
+op1   : 01->CONST   0000004E 00000005  02  03->STRING 01->ref 0042
+        KeyWord: cetak
+op2   : 08->UNUSED  00000000 00000001  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$aksi="cetak"
+[2] '$cetak
+______________________________________________________________________
+#000D: 0x26 ZEND_ASSIGN   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000120 00000001  00  00->NULL   00->val 0000
+op1   : 04->VAR     000000D8 00000010  00  00->NULL   00->val 0000
+op2   : 04->VAR     00000108 00000000  00  00->NULL   00->val 0000
+====================================================================
+$cetak=$aksi="cetak";
+______________________________________________________________________
+#000E: 0x53 ZEND_FETCH_W   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000138 00000000  00  00->NULL   00->val 0000
+op1   : 01->CONST   00000054 00000006  02  03->STRING 01->ref 0042
+        KeyWord: border
+op2   : 08->UNUSED  00000000 00000001  00  00->NULL   00->val 0000
+----------------------------------------------------------------
+[1] '$border
+______________________________________________________________________
+#000F: 0x26 ZEND_ASSIGN   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000150 00000001  00  00->NULL   00->val 0000
+op1   : 04->VAR     00000138 00000010  00  00->NULL   00->val 0000
+op2   : 01->CONST   0000005C 00000014  02  03->STRING 01->ref 0042
+        KeyWord:  border=1 width=600 
+====================================================================
+$border=" border=1 width=600 ";
+______________________________________________________________________
+#0010: 0x49 ZEND_INCLUDE_OR_EVAL   LineNo: 0x0000  Flags: 0x07()
+result: 04->VAR     00000168 00000001  00  00->NULL   00->val 0000
+op1   : 01->CONST   00000072 00000011  02  03->STRING 01->ref 0042
+        KeyWord: pimpinancetak.php
+op2   : 08->UNUSED  00000002 00000000  00  00->NULL   00->val 0000
+______________________________________________________________________
+#0011: 0x3E ZEND_RETURN   LineNo: 0x0000  Flags: 0x02()
+op1   : 01->CONST   00000001 00000038  02  01->LONG   01->ref 0012
+====================================================================
+Return (1);
+______________________________________________________________________
+#0012: 0x95 ZEND_HANDLE_EXCEPTION   LineNo: 0x0000  Flags: 0x00()
+______________________________________________________________________
+FunctionsCount: 0000
+Classes: 0000
+File sucessfully processes!
+

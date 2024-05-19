@@ -1,0 +1,946 @@
+	<tr>
+		<td  colspan=2>
+		<hr size=1><b>Data Pribadi<hr size=1>
+		</td>
+	</tr>
+	<tr>
+		<td  >NIP</td>
+		<td><input class=masukan name=nip type=text size=25 maxlength=50 value='<? echo $nip?>'></td>
+	</tr>
+	<tr>
+		<td  >Nama Lengkap*</td>
+		<td><input class=masukan name=nama type=text size=50 maxlength=50 value='<? echo $nama?>'></td>
+	</tr>
+	<tr>
+		<td  >Panggilan</td>
+		<td><input class=masukan name=panggilan type=text size=25 maxlength=50 value='<? echo $panggilan?>'></td>
+	</tr>
+
+	<tr>
+		<td  >Tempat / Tgl Lahir</td>
+		<td>
+		<input class=masukan name=tempatlahir type=text size=15 maxlength=50 value='<? echo $tempatlahir?>'>
+/
+			<select class=masukan name=tgl>
+			<? 
+					for ($i=1;$i<=31;$i++) {
+						if ($tgl==$i) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>-			
+			<select class=masukan name=bln>
+			<? 
+					for ($i=1;$i<=12;$i++) {
+						if ($i==$bln) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+						$cek="";
+					}
+			?>
+			</select>-
+			<select class=masukan name=thn>
+			<? 
+					for ($i=1900;$i<=$w[year];$i++) {
+						if ($i==$thn) {
+							$cek="selected";
+						} 
+						echo "<option value='$i' $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>
+	</tr>
+
+
+	<tr>
+		<td  >Jenis kelamin</td>
+		<td>
+			<input class=masukan name=kelamin type=radio value=L <? if ($kelamin=="L") {echo "checked";}?>>Laki-laki 
+			<input class=masukan name=kelamin type=radio value=P <? if ($kelamin!="L") {echo "checked";}?>>Perempuan</td>
+		</td>
+	</tr>
+
+	<tr>
+		<td  >Agama</td>
+		<td>
+			<select class=masukan name=agama>
+			<? 
+				foreach ($arrayagama as $k=>$v) {
+					if ($agama==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+			</td>
+	</tr>
+
+	<tr>
+		<td  >Alamat</td>
+		<td><textarea class=masukan name=alamatuser cols=50 rows=4><? echo $alamatuser?></textarea></td>
+	</tr>
+	<tr>
+		<td  >Telepon Tempat Tinggal</td>
+		<td><input class=masukan name=telepon type=text size=25  value='<? echo $telepon?>'></td>
+	</tr>
+	<tr>
+		<td  >No. HP</td>
+		<td><input class=masukan name=hp type=text size=25  value='<? echo $hp?>'></td>
+	</tr>
+	<tr>
+		<td  >No. KTP</td>
+		<td><input class=masukan name=ktp type=text size=25 value='<? echo $ktp?>'></td>
+	</tr>
+	<tr>
+		<td  >No. SIM</td>
+		<td><input class=masukan name=sim type=text size=25  value='<? echo $sim?>'></td>
+	</tr>
+	<tr>
+		<td  >Gol. Darah</td>
+		<td>
+			<select class=masukan name=goldarah>
+			<? 
+				foreach ($arraygoldarah as $k=>$v) {
+					if ($goldarah==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+			</td>
+	</tr>
+	<tr>
+		<td  >Status Pernikahan</td>
+		<td>
+			<select class=masukan name=statusnikah>
+			<? 
+				foreach ($arraystatusnikah as $k=>$v) {
+					if ($statusnikah==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+			</td>
+	</tr>
+	<tr>
+		<td>Jumlah Anak</td>
+		<td>
+			<input class=masukan name=jmlanak type=text size=2 maxlength=2 value='<? echo $jmlanak?>'>
+		</td>
+	</tr>
+	<tr>
+		<td>Anak Ke</td>
+		<td>
+			<input class=masukan name=anakke type=text size=2 maxlength=2 value='<? echo $anakke?>'>
+			Dari <input class=masukan name=jmlsaudara type=text size=2 maxlength=2 value='<? echo $jmlsaudara?>'>
+			Bersaudara
+		</td>
+	</tr>
+	<tr>
+		<td>Jarak Tempuh dr Tempat Tinggal</td>
+		<td>
+			<input class=masukan name=jarak type=text size=2  value='<? echo $jarak?>'> km
+		</td>
+	</tr>
+	<tr>
+		<td  >Pendidikan Terakhir / TMT</td>
+		<td>
+			<select class=masukan name=pendidikan>
+			<? 
+				foreach ($arraypendidikan as $k=>$v) {
+					if ($pendidikan==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select> / 
+			<select class=masukan name=tglp>
+				<option value='-'>tgl</option>
+			<? 
+					for ($i=1;$i<=31;$i++) {
+						if ($tglp==$i) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>-			
+			<select class=masukan name=blnp>
+				<option value='-'>bln</option>
+			<? 
+					for ($i=1;$i<=12;$i++) {
+						if ($i==$blnp) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+						$cek="";
+					}
+			?>
+			</select>-
+			<select class=masukan name=thnp>
+				<option value='-'>thn</option>
+			<? 
+					for ($i=1900;$i<=$w[year];$i++) {
+						if ($i==$thnp) {
+							$cek="selected";
+						}
+						echo "<option value='$i' $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>
+
+	</tr>
+	<tr>
+		<td  >Keterangan Pendidikan</td>
+		<td><textarea class=masukan name=ketpendidikan cols=50 rows=3><? echo $ketpendidikan?></textarea></td>
+	</tr>
+	<tr>
+		<td>Pekerjaan Terakhir</td>
+		<td><input class=masukan name=pekerjaan type=text size=25  value='<? echo $pekerjaan?>'></td>
+	</tr>
+	<tr>
+		<td>Lama kerja</td>
+		<td>
+			<input class=masukan name=lama type=text size=2  value='<? echo $lama?>'> tahun
+		</td>
+	</tr>
+	<tr>
+		<td  >Alamat Tinggal Terbaru</td>
+		<td><textarea class=masukan name=alamatuserbaru cols=50 rows=4><? echo $alamatuserbaru?></textarea></td>
+	</tr>
+	<tr>
+		<td  >Telepon Terbaru</td>
+		<td><input class=masukan name=teleponbaru type=text size=25  value='<? echo $teleponbaru?>'></td>
+	</tr>
+	<tr>
+		<td  >No. HP Terbaru</td>
+		<td><input class=masukan name=hpbaru type=text size=25  value='<? echo $hpbaru?>'></td>
+	</tr>
+
+	<tr>
+		<td  colspan=2><hr size=1>
+		<b>Data Orang Tua<hr size=1></td>
+	</tr>
+	<tr>
+		<td  >Nama Ibu</td>
+		<td><input class=masukan name=namaibu type=text size=25 maxlength=50 value='<? echo $namaibu?>'></td>
+	</tr>
+
+	<tr>
+		<td  >Tempat / Tgl Lahir</td>
+		<td>
+		<input class=masukan name=tempatibu type=text size=15 maxlength=50 value='<? echo $tempatibu?>'>
+/
+			<select class=masukan name=tglibu>
+				<option value='-'>tgl</option>
+			<? 
+					for ($i=1;$i<=31;$i++) {
+						if ($tglibu==$i) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>-			
+			<select class=masukan name=blnibu>
+				<option value='-'>bln</option>
+			<? 
+					for ($i=1;$i<=12;$i++) {
+						if ($i==$blnibu) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+						$cek="";
+					}
+			?>
+			</select>-
+			<select class=masukan name=thnibu>
+				<option value='-'>thn</option>
+			<? 
+					for ($i=1900;$i<=$w[year];$i++) {
+						if ($i==$thnibu) {
+							$cek="selected";
+						}
+						echo "<option value='$i' $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>
+	</tr>
+	<tr>
+		<td  >Pendidikan Terakhir</td>
+		<td>
+			<select class=masukan name=pendidikanibu>
+			<? 
+				foreach ($arraypendidikan as $k=>$v) {
+					if ($pendidikanibu==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Pekerjaan</td>
+		<td><input class=masukan name=pekerjaanibu type=text size=25  value='<? echo $pekerjaanibu?>'></td>
+	</tr>
+	<tr>
+		<td  >Alamat</td>
+		<td><textarea class=masukan name=alamatibu cols=50 rows=4><? echo $alamatibu?></textarea></td>
+	</tr>
+	<tr>
+		<td  >Telepon </td>
+		<td><input class=masukan name=teleponibu type=text size=25  value='<? echo $teleponibu?>'></td>
+	</tr>
+	<tr>
+		<td  >Nama Ayah</td>
+		<td><input class=masukan name=namaayah type=text size=25 maxlength=50 value='<? echo $namaayah?>'></td>
+	</tr>
+
+	<tr>
+		<td  >Tempat / Tgl Lahir</td>
+		<td>
+		<input class=masukan name=tempatayah type=text size=15 maxlength=50 value='<? echo $tempatayah?>'>
+/
+			<select class=masukan name=tglayah>
+				<option value='-'>tgl</option>
+			<? 
+					for ($i=1;$i<=31;$i++) {
+						if ($tglayah==$i) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>-			
+			<select class=masukan name=blnayah>
+				<option value='-'>bln</option>
+			<? 
+					for ($i=1;$i<=12;$i++) {
+						if ($i==$blnayah) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+						$cek="";
+					}
+			?>
+			</select>-
+			<select class=masukan name=thnayah>
+				<option value='-'>thn</option>
+			<? 
+					for ($i=1900;$i<=$w[year];$i++) {
+						if ($i==$thnayah) {
+							$cek="selected";
+						}
+						echo "<option value='$i' $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>
+	</tr>
+	<tr>
+		<td  >Pendidikan</td>
+		<td>
+			<select class=masukan name=pendidikanayah>
+			<? 
+				foreach ($arraypendidikan as $k=>$v) {
+					if ($pendidikanayah==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Pekerjaan</td>
+		<td><input class=masukan name=pekerjaanayah type=text size=25  value='<? echo $pekerjaanayah?>'></td>
+	</tr>
+
+
+	<tr>
+		<td  colspan=2><hr size=1>
+		<b>Data Keluarga<hr size=1></td>
+	</tr>
+	<tr>
+		<td  >Nama Istri/Suami</td>
+		<td><input class=masukan name=namapas type=text size=25 maxlength=50 value='<? echo $namapas?>'></td>
+	</tr>
+
+	<tr>
+		<td  >Tempat / Tgl Lahir</td>
+		<td>
+		<input class=masukan name=tempatpas type=text size=15 maxlength=50 value='<? echo $tempatpas?>'>
+/
+			<select class=masukan name=tglpas>
+				<option value='-'>tgl</option>
+			<? 
+					for ($i=1;$i<=31;$i++) {
+						if ($tglpas==$i) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>-			
+			<select class=masukan name=blnpas>
+				<option value='-'>bln</option>
+			<? 
+					for ($i=1;$i<=12;$i++) {
+						if ($i==$blnpas) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+						$cek="";
+					}
+			?>
+			</select>-
+			<select class=masukan name=thnpas>
+				<option value='-'>thn</option>
+			<? 
+					for ($i=1900;$i<=$w[year];$i++) {
+						if ($i==$thnpas) {
+							$cek="selected";
+						}
+						echo "<option value='$i' $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>
+	</tr>
+	<tr>
+		<td  >Pendidikan Terakhir</td>
+		<td>
+			<select class=masukan name=pendidikanpas>
+			<? 
+				foreach ($arraypendidikan as $k=>$v) {
+					if ($pendidikanpas==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Pekerjaan</td>
+		<td><input class=masukan name=pekerjaanpas type=text size=25  value='<? echo $pekerjaanpas?>'></td>
+	</tr>
+	<tr>
+		<td  >Gol. Darah</td>
+		<td>
+			<select class=masukan name=goldarahpas>
+			<? 
+				foreach ($arraygoldarah as $k=>$v) {
+					if ($goldarahpas==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+			</td>
+	</tr>
+	<tr>
+		<td  >Telepon</td>
+		<td><input class=masukan name=teleponpas type=text size=25  value='<? echo $teleponpas?>'></td>
+	</tr>
+	<tr>
+		<td  >No. HP</td>
+		<td><input class=masukan name=hppas type=text size=25  value='<? echo $hppas?>'></td>
+	</tr>
+	<tr>
+		<td  >Nama Anak Pertama</td>
+		<td><input class=masukan name=namaanak type=text size=25 maxlength=50 value='<? echo $namaanak?>'></td>
+	</tr>
+	<tr>
+		<td  >Tempat / Tgl Lahir</td>
+		<td>
+		<input class=masukan name=tempatanak type=text size=15 maxlength=50 value='<? echo $tempatanak?>'>
+/
+			<select class=masukan name=tglanak>
+				<option value='-'>tgl</option>
+			<? 
+					for ($i=1;$i<=31;$i++) {
+						if ($tglanak==$i) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>-			
+			<select class=masukan name=blnanak>
+				<option value='-'>bln</option>
+			<? 
+					for ($i=1;$i<=12;$i++) {
+						if ($i==$blnanak) {
+							$cek="selected";
+						}
+						echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+						$cek="";
+					}
+			?>
+			</select>-
+			<select class=masukan name=thnanak>
+				<option value='-'>thn</option>
+			<? 
+					for ($i=1900;$i<=$w[year];$i++) {
+						if ($i==$thnanak) {
+							$cek="selected";
+						}
+						echo "<option value='$i' $cek>$i</option>";
+						$cek="";
+					}
+			?>
+			</select>
+	</tr>
+
+
+	<tr>
+		<td  >Jenis kelamin</td>
+		<td>
+			<input class=masukan name=kelaminanak type=radio value=L <? if ($kelaminanak=="L") {echo "checked";}?>>Laki-laki 
+			<input class=masukan name=kelaminanak type=radio value=P <? if ($kelaminanak!="L") {echo "checked";}?>>Perempuan</td>
+		</td>
+	</tr>
+	<tr>
+		<td  >Divisi</td>
+		<td>
+			<select class=masukan name=divisi>
+			<? 
+				foreach ($arraydivisi as $k=>$v) {
+					if ($divisi==$k) {
+						$cek="selected";
+					}
+					echo "<option $cek value=$k >$v</option>";
+					$cek="";
+				}
+			?>
+			</select>
+			</td>
+	</tr>
+	
+	
+	
+	
+	/////////////
+	
+		<tr valign=top>
+		<td  >Usia</td>
+		<td>
+			<input type=text name=usia1 class=masukan size=2 value='<? echo $usia1?>'>
+			<= usia <= 
+			<input type=text name=usia2 class=masukan size=2 value='<? echo $usia2?>'>
+
+			<br>Kosongkan isian Usia untuk menampilkan seluruh data atau isi untuk 
+			menampilkan seluruh Operator dengan usia antara usia awal sampai usia akhir
+		</td>
+	</tr>
+	<? 
+	echo "
+		<tr>
+			<td nowrap>
+				Tanggal Lahir Dari
+			</td>
+			<td>
+					<select class=masukan name=tgld>
+					";
+							for ($i=1;$i<=31;$i++) {
+								if ($i==1){
+									$cek="selected";
+ 								} 
+								echo "<option value=$i $cek>$i</option>";
+								$cek="";
+							}
+					echo "
+					</select> -			
+					<select class=masukan name=blnd>
+					";
+							for ($i=1;$i<=12;$i++) {
+								if ($i==1){
+									$cek="selected";
+								} 
+								echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+								$cek="";
+							}
+					echo "
+					</select> -
+					<select class=masukan name=thnd>
+					";
+							for ($i=1900;$i<=$waktu[year];$i++) {
+								if ($i==1900){
+									$cek="selected";
+								}	
+								echo "<option value='$i' $cek>$i</option>";
+								$cek="";
+							}
+					echo "
+					</select>
+					<input type=checkbox value=1 name=isthn> Tahun tidak diperhitungkan
+			</td>
+		</tr>
+		<tr>
+			<td >
+				Sampai
+			</td>
+			<td>
+					<select class=masukan name=tgls>
+					";
+							for ($i=1;$i<=31;$i++) {
+								if ($i==$waktu[mday]  && $tgls==""){
+									$cek="selected";
+								}	elseif ($tgls==$i) {
+									$cek="selected";
+								} 
+								echo "<option value=$i $cek>$i</option>";
+								$cek="";
+							}
+					echo "
+					</select>-			
+					<select class=masukan name=blns>
+					";
+							for ($i=1;$i<=12;$i++) {
+								if ($i==$waktu[mon] && $blns==""){
+									$cek="selected";
+								} else						
+								if ($i==$blns) {
+									$cek="selected";
+								} 
+								echo "<option value=$i $cek>".$arraybulan[$i-1]."</option>";
+								$cek="";
+							}
+					echo "
+					</select>-
+					<select class=masukan name=thns>
+					";
+							for ($i=1900;$i<=$waktu[year];$i++) {
+								if ($i==$waktu[year] && $thns==""){
+									$cek="selected";
+								}	 else					
+								if ($i==$thns) {
+									$cek="selected";
+								} 
+								echo "<option value='$i' $cek>$i</option>";
+								$cek="";
+							}
+					echo "
+					</select>
+			</td>
+		</tr>";
+	?>
+	<tr>
+		<td >Agama</td>
+		<td>
+			<select class=masukan name=agama>
+				<option value=semua >Semua Agama</option>
+			<? 
+				foreach ($arrayagama as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td >Jenis Kelamin</td>
+		<td>
+			<select class=masukan name=jk>
+				<option value=semua >Semua</option>
+				<option value=L>Laki-laki</option>
+				<option value=P>Perempuan</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td nowrap >Pendidikan Terakhir</td>
+		<td>
+			<select class=masukan name=pendidikan>
+				<option value=semua >Semua</option>
+			<? 
+				foreach ($arraypendidikan as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+	</tr>
+	<tr>
+		<td  >Gol. Darah</td>
+		<td>
+			<select class=masukan name=goldarah>
+				<option value=semua >Semua</option>
+			<? 
+				foreach ($arraygoldarah as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+	</tr>
+	<tr>
+		<td  >Status Nikah</td>
+		<td>
+			<select class=masukan name=statusnikah>
+				<option value=semua >Semua</option>
+			<? 
+				foreach ($arraystatusnikah as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+	</tr>
+	<tr>
+		<td  colspan=2><hr size=1></td>
+	</tr>
+	<tr>
+		<td >Divisi</td>
+		<td>
+			<select class=masukan name=divisi>
+				<option value=semua >Semua Divisi</option>
+			<? 
+				foreach ($arraydivisi as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td >Departemen</td>
+		<td>
+			<select class=masukan name=bidang>
+				<option value=semua >Semua Bidang</option>
+			<? 
+				foreach ($bidanguser as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td >Pangkat</td>
+		<td>
+			<select class=masukan name=pangkat>
+				<option value=semua >Semua Pangkat</option>
+			<? 
+				foreach ($arraypangkat as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td >Status Operator</td>
+		<td>
+			<select class=masukan name=statuspegawai>
+				<option value=semua >Semua Status</option>
+			<? 
+				foreach ($arraystatuspegawai as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td >Waktu Kerja</td>
+		<td>
+			<select class=masukan name=waktukerja>
+				<option value=semua >Semua Status</option>
+			<? 
+				foreach ($arraywaktukerja as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td  >Jabatan Struktural</td>
+		<td>
+			<select class=masukan name=jabatan>
+				<option value=semua >Semua Jabatan</option>
+			<? 
+				foreach ($arrayjabatan as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+	</tr>
+	<tr>
+		<td  >Jabatan Fungsional</td>
+		<td>
+			<select class=masukan name=fungsional>
+				<option value=semua >Semua Fungsional</option>
+			<? 
+				foreach ($arrayfungsional as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+			</select>
+	</tr>
+	<tr>					
+	<td >	Status Kerja</td>
+	<td>
+					
+		<select class=masukan name=statuskerja>
+			<option value=semua >Semua Status</option>
+			<? 
+				foreach ($arraystatuskerja as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+		</select>
+	</td>
+	</tr>
+	<tr>
+		<td  colspan=2><hr size=1></td>
+	</tr>
+
+	<tr>					
+	<td >	Lokasi Kerja</td>
+	<td>
+					
+		<select class=masukan name=lokasi>
+			<option value=semua >Semua Lokasi</option>
+			<? 
+				foreach ($arraylokasi as $k=>$v) {
+					echo "<option $cek value=$k >$v</option>";
+				}
+			?>
+		</select>
+	</td>
+	</tr>
+	
+	/////
+	
+		$usia1=trim($usia1);
+	$usia2=trim($usia2);
+	if ($usia1!="" && is_numeric($usia1) && $usia2!="" && is_numeric($usia2)) {
+		$qusia=" AND ((YEAR(NOW())-YEAR(TGLLAHIR)) +  
+  	IF(MONTH(NOW())>MONTH(TGLLAHIR),0,IF(MONTH(NOW())<MONTH(TGLLAHIR),-1,IF(DAYOFMONTH(NOW())>=DAYOFMONTH(TGLLAHIR),0,-1))) >= $usia1 
+  	AND (YEAR(NOW())-YEAR(TGLLAHIR)) +  
+  	IF(MONTH(NOW())>MONTH(TGLLAHIR),0,IF(MONTH(NOW())<MONTH(TGLLAHIR),-1,IF(DAYOFMONTH(NOW())>=DAYOFMONTH(TGLLAHIR),0,-1))) <= $usia2) ";
+		//$namadicari2=htmlspecialchars($namadicari2);
+		$jusia = ". Usia antara $usia1 s.d $usia2. ";
+	}	
+
+	
+
+
+	if ($jk!= "semua") {
+		$qkelamin=" AND KELAMIN = '$jk'";
+		$jkelamin = ". Jenis Kelamin: $jk";
+	}
+
+	if ($isthn==1) {
+		$qtanggal="
+			AND 
+			(
+				DATE_FORMAT(user.TGLLAHIR,'1901-%m-%d') >= DATE_FORMAT('1901-$blnd-$tgld','%Y-%m-%d') AND
+				DATE_FORMAT(user.TGLLAHIR,'1901-%m-%d') <= DATE_FORMAT('1901-$blns-$tgls','%Y-%m-%d') 
+			)
+		";
+		$jtanggal="<br> Tanggal Lahir dari '$tgld-$blnd' s.d '$tgls-$blns'";
+	} else {
+		$qtanggal="
+			AND 
+			(
+				user.TGLLAHIR >=DATE_FORMAT('$thnd-$blnd-$tgld','%Y-%m-%d') AND
+				user.TGLLAHIR <=DATE_FORMAT('$thns-$blns-$tgls','%Y-%m-%d') 
+			)
+		";
+		$jtanggal="<br> Tanggal Lahir dari '$tgld-$blnd-$thnd' s.d '$tgls-$blns-$thns'";
+	}	
+
+
+	if ($agama != "semua") {
+		$qagama=" AND AGAMA = $agama ";
+		$jagama = ". Agama: ".$arrayagama[$agama]."";
+	}
+
+
+	if ($bidang != "semua") {
+		$qbidang=" AND BIDANG = $bidang ";
+		$jbidang = ". Departemen: ".$bidanguser[$bidang]."";
+	}
+
+	if ($jabatan != "semua") {
+		$qjabatan=" AND JABATAN = $jabatan ";
+		$jjabatan = ". Jabatan Struktural: ".$arrayjabatan[$jabatan]."";
+	}
+
+	if ($divisi != "semua") {
+		$qdivisi=" AND DIVISI = $divisi ";
+		$jdivisi = ". Divisi: ".$arraydivisi[$divisi]."";
+	}
+	if ($pangkat != "semua") {
+		$qpangkat=" AND PANGKAT = $pangkat ";
+		$jpangkat = ". Pangkat: ".$arraypangkat[$pangkat]."";
+	}
+	if ($fungsional != "semua") {
+		$qfungsional=" AND FUNGSIONAL = $fungsional ";
+		$jfungsional = ". Jabatan Fungsional: ".$arrayfungsional[$fungsional]."";
+	}
+
+
+	if ($pendidikan != "semua") {
+		$qpendidikan=" AND PENDIDIKAN = '$pendidikan' ";
+		$jpendidikan = ". Pendidikan Terakhir: ".$arraypendidikan[$pendidikan]."";
+	}
+
+	if ($statusnikah != "semua") {
+		$qstatusnikah=" AND STATUSNIKAH = '$statusnikah' ";
+		$jstatusnikah = ". Status Nikah: ".$arraystatusnikah[$statusnikah]."";
+	}
+
+	if ($goldarah != "semua") {
+		$qgoldarah=" AND GOLDARAH = '$goldarah' ";
+		$jgoldarah = ". Gol. Darah: ".$arraygoldarah[$goldarah]."";
+	}
+
+	if ($lokasi != "semua") {
+		$qlokasi=" AND LOKASI = $lokasi ";
+		$jlokasi = ". Lokasi Kerja: ".$arraylokasi[$lokasi]."";
+	}
+	if ($statuspegawai != "semua") {
+		$qstatuspegawai=" AND STATUSPEGAWAI = $statuspegawai ";
+		$jstatuspegawai = ". Status Operator: ".$arraystatuspegawai[$statuspegawai]."";
+	}
+	if ($statuskerja != "semua") {
+		$qstatuskerja=" AND STATUSKERJA = $statuskerja ";
+		$jstatuskerja = ". Status Kerja: ".$arraystatuskerja[$statuskerja]."";
+	}
+
+	if ($waktukerja != "semua") {
+		$qstatuskerja=" AND WAKTUKERJA = $waktukerja ";
+		$jstatuskerja = ". Waktu Kerja: ".$arraywaktukerja[$waktukerja]."";
+	}	

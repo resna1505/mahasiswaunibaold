@@ -1,0 +1,15 @@
+<?php
+/*********************/
+/*                   */
+/*  Dezend for PHP5  */
+/*         NWS       */
+/*      Nulled.WS    */
+/*                   */
+/*********************/
+
+$styletdjudul = "style=' font-size:14pt;'";
+$styletdjudul2 = "style=' font-size:22pt;'";
+$styletd = "style=' font-size:13pt;'";
+$styletd2 = "style=' font-size:16pt;'";
+$bodyijazah .= "\r\n    <center   style='page-break-after:always;'> \r\n    \r\n    <table width=1000  >\r\n    <tr>\r\n    <td align=right {$styletdjudul}>\r\n    No. {$noseriijazah}\r\n    <BR><BR>\r\n     </td>\r\n    </tr>\r\n    <tr>\r\n    <td align=center >\r\n      <b {$styletdjudul}>DEPARTEMEN PENDIDIKAN NASIONAL</b>\r\n      <br> \r\n      <b {$styletdjudul2}>POLITEKNIK NEGERI PONTIANAK</b>\r\n    </td>\r\n    </tr>\r\n    <tr>\r\n    <td align=center  >\r\n    <br><br>\r\n      <table width=100% cellpadding=4 >\r\n        <tr >\r\n          <td width=25% {$styletd}> Memberikan Kepada</td>\r\n          <td {$styletd}>:</td>\r\n          <td {$styletd2}>{$d['NAMA']}</td>\r\n        </tr>\r\n        <tr>\r\n          <td {$styletd}>Tempat dan Tanggal Lahir</td>\r\n          <td {$styletd}>:</td>\r\n          <td {$styletd}>{$d['TEMPAT']}, {$tmp['2']} ".$arraybulan[$tmp[1] - 1]." {$tmp['0']} </td>\r\n        </tr>\r\n        <tr>\r\n          <td {$styletd}>No. Induk Mahasiswa</td>\r\n          <td {$styletd}>:</td>\r\n          <td {$styletd}>{$d['ID']}</td>\r\n        </tr>\r\n        <tr>\r\n          <td {$styletd}>Jurusan</td>\r\n          <td {$styletd}>:</td>\r\n          <td {$styletd}>{$d['NAMAF']}</td>\r\n        </tr>\r\n        <tr>\r\n          <td {$styletdjudul2} colspan=3 align=center>\r\n            <BR> \r\n          <b>IJAZAH ".$arraypendidikantertinggi[$d[TINGKAT]]."</b>\r\n          <BR><BR> \r\n          </td>\r\n        </tr>\r\n        <tr>\r\n          <td {$styletd}>Program Studi</td>\r\n          <td  {$styletd}>:</td>\r\n          <td {$styletd}>{$d['NAMAP']}</td>\r\n        </tr>\r\n        <tr>\r\n          <td colspan=3 valign=top {$styletd} style=''><br>\r\n          Setelah memenuhi semuapersyaratan yang ditentukan untuk memperoleh ijazah tersebut, kepadanya diberikan hak untuk memakai gelar profesional {$d['GELAR']} {$d['NAMAP']}, serta segala wewenang dan hak yang berhubungan dengan ijazah yang dimilikinya.\r\n          </td>\r\n        </tr>\r\n      </table>\r\n      \r\n    \r\n \r\n      <!--Tanggal kelulusan  {$tgllulus} ".$arraybulan[$blnlulus - 1]." {$thnlulus} -->\r\n    </td>\r\n    </tr>\r\n    </table>\r\n    <br><br>\r\n    <table width=800>\r\n      <tr valign=top>\r\n        <td width=30%>\r\n \r\n        </td>\r\n        <td  >\r\n        -\r\n        </td>\r\n        <td width=40% {$styletd} nowrap>\r\n          ".$lokasikantor.", {$tgllap['tgl']} ".$arraybulan[$tgllap[bln] - 1]." {$tgllap['thn']}, <br>\r\n          <i>\r\n          Direktur,\r\n          <br><br><br><br><br><br>\r\n          <u>{$d2['REKTOR']}</u><br>\r\n          NIP. {$d2['NIPREKTOR']}\r\n        </td>\r\n      </tr>\r\n    </table>\r\n    </center>\r\n    \r\n    ";
+?>

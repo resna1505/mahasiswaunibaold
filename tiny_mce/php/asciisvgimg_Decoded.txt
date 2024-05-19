@@ -1,0 +1,1799 @@
+
+  "rtrim"
+  "dirname"
+  "[FullPath To CurrentPhpFile]  (Initial Len was: 91)"
+  [FullPath To CurrentPhpFile]  (Initial Len was: 91)
+  "/\"
+  /\
+
+  1
+  "w"
+  "h"
+  0  5
+  xmin
+  "xmax"
+  5  xmax
+  0  5
+  ymin
+  "ymax"
+  5  ymax
+  5  ymax
+  border
+  "stroke"
+  "black"  stroke
+  "fill"
+  "none"  fill
+  "curdash"
+  "6076704"  curdash
+  6076704  "false"
+  isdashed
+  "marker"
+  "none"  marker
+  "markerfill"
+  "green"  markerfill
+  "gridcolor"
+  "gray"  gridcolor
+  "axescolor"
+  "black"  axescolor
+  "strokewidth"
+  1  strokewidth
+  "dotradius"
+  8  dotradius
+  "ticklength"
+  4  ticklength
+  "fontsize"
+  12  fontsize
+  "fontfill"
+  "37415208"  fontfill
+  "fontbackground"
+  "37411360"  fontbackground
+  "w"
+  "w"
+  "h"
+  "h"
+  "imagecreate"
+  "w"
+  "h"
+
+  img
+  "function_exists"
+  "imagesetthickness"
+  imagesetthickness
+  usegd2
+  "function_exists"
+  "imagettftext"
+  imagettftext
+  usettf
+  "GLOBALS"  usettf
+  fontfile
+  "w"
+  width
+  "h"
+  height
+  "w"
+  xunitlength
+  "h"
+  yunitlength
+  "round"
+  "w"
+
+  "h"
+
+  origin
+  "imagecolorallocate"
+  "img"
+  255
+  255
+  255
+  255
+  white
+  "imagecolorallocate"
+  "img"
+  0
+  0
+  0
+  0
+  black
+  "imagecolorallocate"
+  "img"
+  200
+  200
+  200
+  200
+  gray
+  "imagecolorallocate"
+  "img"
+  255
+  0
+  0
+  0
+  red
+  "imagecolorallocate"
+  "img"
+  255
+  165
+  0
+  0
+  orange
+  "imagecolorallocate"
+  "img"
+  255
+  255
+  0
+  0
+  yellow
+  "imagecolorallocate"
+  "img"
+  0
+  255
+  0
+  0
+  green
+  "imagecolorallocate"
+  "img"
+  0
+  0
+  255
+  255
+  blue
+  "imagecolorallocate"
+  "img"
+  0
+  255
+  255
+  255
+  cyan
+  "imagecolorallocate"
+  "img"
+  128
+  0
+  128
+  128
+  purple
+  "imagefill"
+  "img"
+  0
+  0
+  "white"
+
+  
+  "script"
+  1  "explode"
+  ","
+  "script"
+
+  "count"
+  "sa"
+
+  "border"
+  5  border
+  "AStoIMG"
+  "sa"
+
+  "ASinitPicture"
+  "sa"
+  0
+  4
+  4
+
+  "ASaxes"
+  "sa"
+  4
+  5
+  5
+
+  "inx"
+  "count"
+  "sa"
+
+  "inx"
+  stroke
+  "inx"
+  strokewidth
+  "usegd2"
+  "imagesetthickness"
+  "img"
+  "strokewidth"
+
+  "inx"
+  "ASsetdash"
+
+
+  "ASsetdash"
+  none
+  "inx"
+  "ASslopefield"
+
+
+  "inx"
+  "AStext"
+
+
+  "inx"
+  "inx"
+
+  "inx"
+  "inx"
+
+  "inx"
+  "inx"
+  "is_numeric"
+  "inx"
+
+  "ASplot"
+
+
+  "ASplot"
+
+  "inx"
+  10
+    10
+  "script"
+  1  "html_entity_decode"
+  "script"
+  "ENT_COMPAT"
+  "UTF-8"
+  UTF-8
+  "explode"
+  ";"
+  "script"
+
+  AScom
+  "AScom"
+
+  "preg_match"
+  "/\s*(\w+)\s*=(.+)/"
+  "com"
+  "matches"
+
+  "trim"
+  "str_replace"
+  """  str_replace
+  "33636064"
+  "matches"
+
+
+
+  "matches"
+
+  "xmin"
+
+  "xmax"
+
+  "ymin"
+
+  "ymax"
+
+  "fill"
+
+  "marker"
+
+  "markerfill"
+
+  "fontbackground"
+
+  "fontfill"
+  "matches"
+
+  1
+  "stroke"
+  "matches"
+  stroke
+  "isdashed"
+  "ASsetdash"
+  1
+  "strokedasharray"
+  "ASsetdash"
+
+  1
+  "strokewidth"
+  "matches"
+  strokewidth
+  "usegd2"
+  "imagesetthickness"
+  "img"
+  "strokewidth"
+
+
+  "preg_match"
+  "/\s*(\w+)\((.*)\)\s*$/"
+  "com"
+  "matches"
+
+  "parseargs"
+
+  "matches"
+  "ASinitPicture"
+
+  1
+  "setBorder"
+  "argarr"
+  border
+  1
+  "axes"
+  "ASaxes"
+
+  1
+  "line"
+  "ASline"
+
+  1
+  "path"
+  "ASpath"
+
+  1
+  "circle"
+  "AScircle"
+
+  1
+  "ellipse"
+  "ASellipse"
+
+  1
+  "rect"
+  "ASrect"
+
+  1
+  "text"
+  "AStext"
+
+  1
+  "textabs"
+  "AStextAbs"
+
+  1
+  "dot"
+  "ASdot2"
+
+  1
+  "plot"
+  "ASplot"
+
+  1
+  "slopefield"
+  "ASslopefield"
+
+  1
+  "arc"
+  "ASarc"
+
+
+
+
+  
+  "func_num_args"
+  func_num_args
+  "func_get_arg"
+  0
+  0
+  "dash"
+  curdash
+  curdash
+  "curdash"
+  "dash"
+  "/\d/"
+  "dash"
+
+  "false"
+  isdashed
+    isdashed
+  0  "preg_replace"
+  "/\s+/"
+  ","
+  "dash"
+
+  "explode"
+  ","
+  "dash"
+
+
+  "alt"
+  "count"
+  "darr"
+
+  "doagain"
+  "i"
+  "i"
+  "darr"
+
+  "alt"
+  "stroke"
+
+  "color"
+  "array_pad"
+  "style"
+  "count"
+  "style"
+
+  "color"
+
+  "alt"
+  "i"
+  "doagain"
+  "imagesetstyle"
+  "img"
+  "style"
+
+  "true"
+  isdashed
+    isdashed
+  "arg"
+  "pos"
+  "angle"
+  "func_num_args"
+  func_num_args
+  "pt2arr"
+
+  "func_get_arg"
+  1
+  1
+  "func_num_args"
+  func_num_args
+  "func_get_arg"
+  2
+  2
+  "func_num_args"
+  func_num_args
+  "func_get_arg"
+  3
+  3
+
+  "pt2arr"
+
+  "arg"
+  "arg"
+  "arg"
+  "arg"
+  "arg"
+  "AStextInternal"
+  "st"
+  "pos"
+  "angle"
+
+  
+  "arg"
+  "pos"
+  "angle"
+  "func_num_args"
+  func_num_args
+  "arg"
+  "func_get_arg"
+  1
+  1
+  "func_num_args"
+  func_num_args
+  "func_get_arg"
+  2
+  2
+  "func_num_args"
+  func_num_args
+  "func_get_arg"
+  3
+  3
+
+  "arg"
+  "arg"
+  "arg"
+  "arg"
+  "arg"
+  "arg"
+  "str_replace"
+  "["  str_replace
+  "31533888"
+  "pt"
+
+  "explode"
+  ","
+  "pt"
+
+  "height"
+
+  "AStextInternal"
+  "st"
+  "pos"
+  "angle"
+
+  
+  "p"
+  "st"
+  "pos"
+  "angle"
+  "usettf"
+  "imagettfbbox"
+  "fontsize"
+  "angle"
+  "fontfile"
+  "st"
+
+  "bb"
+  "bb"
+  "p"
+
+  "p"
+
+  "pos"
+  "p"
+  "bbh"
+
+
+  "pos"
+  "p"
+  "bbh"
+
+
+  "pos"
+  "p"
+  "bbw"
+
+
+  "pos"
+  "p"
+  "bbw"
+
+
+  "fontfill"
+  "fontfill"
+
+  "stroke"
+  "fontbackground"
+  "min"
+  "bb"
+
+  "max"
+  "bb"
+
+  "min"
+  "bb"
+
+  "max"
+  "bb"
+
+  "imagefilledrectangle"
+  "img"
+  "p"
+  "p"
+  "p"
+  "p"
+  "fontbackground"
+
+  "imagettftext"
+  "img"
+  "fontsize"
+  "angle"
+  "p"
+  "p"
+  "color"
+  "fontfile"
+  "st"
+
+  
+  "fontsize"
+  "fs"
+  1
+  "fontsize"
+  "fs"
+  2
+  "fs"
+  "angle"
+  "imagefontheight"
+  "fs"
+
+  "fs"
+
+  "st"
+
+
+  "imagefontwidth"
+  "fs"
+
+  "st"
+
+  "fs"
+
+  "p"
+
+  "angle"
+  "p"
+
+
+  "p"
+
+  "pos"
+  "p"
+
+  "pos"
+  "p"
+
+  "pos"
+  "p"
+
+  "pos"
+  "p"
+
+  "fontfill"
+  "fontfill"
+
+  "stroke"
+  "fontbackground"
+  "imagefilledrectangle"
+  "img"
+  "p"
+  "p"
+  "p"
+  "p"
+  "fontbackground"
+
+  "angle"
+  "imagestringup"
+  "img"
+  "fs"
+  "p"
+  "p"
+  "st"
+  "color"
+
+  
+  0  "imagestring"
+  "img"
+  "fs"
+  "p"
+  "p"
+  "st"
+  "color"
+
+  
+  "arg"
+  "arg"
+  "evalifneeded"
+
+  xmin
+  "arg"
+  "evalifneeded"
+
+  xmax
+  "arg"
+  "evalifneeded"
+
+  ymin
+  "arg"
+  "evalifneeded"
+
+  ymax
+  "xmin"
+  "xmin"
+  xmax
+  "is_array"
+  "border"
+
+  "border"
+  border
+  border
+  "count"
+  "border"
+
+  "count"
+  "border"
+
+  "i"
+  "i"
+  "i"
+
+
+  "i"
+
+  "i"
+  "width"
+  xunitlength
+  "height"
+  yunitlength
+  "xunitlength"
+  "xunitlength"
+  1  xunitlength
+  "yunitlength"
+  "yunitlength"
+  1  yunitlength
+  "xmin"
+
+  "ymin"
+
+  "max"
+  "border"
+  0
+  0
+  winxmin
+  "min"
+  "width"
+  "width"
+
+  winxmax
+  "max"
+  "border"
+  0
+  0
+  winymin
+  "min"
+  "height"
+  "height"
+
+  winymax
+    winymax
+  "arg"
+  "xscl"
+  "yscl"
+  "xgrid"
+  "ygrid"
+  "false"
+  "false"
+  "true"
+  "true"
+  "is_numeric"
+  "arg"
+
+  "evalifneeded"
+
+
+  "true"
+  "count"
+  "arg"
+
+  "is_numeric"
+  "arg"
+
+  "evalifneeded"
+
+
+  "true"
+  "count"
+  "arg"
+
+  "arg"
+  "false"
+
+  "true"
+  "count"
+  "arg"
+
+  "arg"
+  "false"
+
+  "evalifneeded"
+
+  "true"
+  "count"
+  "arg"
+
+  "evalifneeded"
+
+  "count"
+  "arg"
+
+  "arg"
+  "false"
+  "count"
+  "arg"
+
+  "arg"
+  "false"
+  "xscl"
+  0  1
+  "yscl"
+  0  1
+  "xgrid"
+  0  1
+  "ygrid"
+  0  1
+  "xscl"
+  "xunitlength"
+
+  "xunitlength"
+  "yscl"
+  "yunitlength"
+
+  "yunitlength"
+  "doy"
+  "min"
+  "xscl"
+  12
+  12
+  fontsize
+  fontsize
+  "dox"
+  "min"
+  "yscl"
+  12
+  12
+  fontsize
+  fontsize
+  "min"
+  "xscl"
+  "yscl"
+  12
+  12
+  fontsize
+  "fontsize"
+  ticklength
+  "usegd2"
+  "imagesetthickness"
+  "img"
+  1
+  1
+  "dogrid"
+  "xgrid"
+  "xunitlength"
+
+  "xunitlength"
+  "ygrid"
+  "yunitlength"
+
+  "yunitlength"
+  "gridcolor"
+  "dox"
+  "origin"
+  "xgrid"
+  0
+  "x"
+  "x"
+  "imageline"
+  "img"
+  "x"
+  "winymin"
+  "x"
+  "winymax"
+  "gc"
+
+  "xgrid"
+
+  "origin"
+  "x"
+  "x"
+  "imageline"
+  "img"
+  "x"
+  "winymin"
+  "x"
+  "winymax"
+  "gc"
+
+  "xgrid"
+
+  "doy"
+  "height"
+  "ygrid"
+  0
+  "y"
+  "y"
+  "imageline"
+  "img"
+  "winxmin"
+  "y"
+  "winxmax"
+  "y"
+  "gc"
+
+  "ygrid"
+
+  "height"
+  "y"
+  "y"
+  "imageline"
+  "img"
+  "winxmin"
+  "y"
+  "winxmax"
+  "y"
+  "gc"
+
+  "ygrid"
+
+  "axescolor"
+  "doy"
+  "origin"
+  "imageline"
+  "img"
+  "origin"
+  "winymin"
+  "origin"
+  "winymax"
+  "ac"
+
+  "height"
+  "y"
+  "y"
+  "imageline"
+  "img"
+  "origin"
+  "y"
+  "origin"
+  "y"
+  "ac"
+
+  "yscl"
+
+  "height"
+  "y"
+  "y"
+  "imageline"
+  "img"
+  "origin"
+  "y"
+  "origin"
+  "y"
+  "ac"
+
+  "yscl"
+
+  "dox"
+  "origin"
+  "imageline"
+  "img"
+  "winxmin"
+  "height"
+  "winxmax"
+  "height"
+  "ac"
+
+  "origin"
+  "x"
+  "x"
+  "imageline"
+  "img"
+  "x"
+  "height"
+  "x"
+  "height"
+  "ac"
+
+  "xscl"
+
+  "origin"
+  "x"
+  "x"
+  "imageline"
+  "img"
+  "x"
+  "height"
+  "x"
+  "height"
+  "ac"
+
+  "xscl"
+
+  "dolabels"
+  "xscl"
+  "yscl"
+  "xmin"
+  "xmin"
+  "lyp"
+  right
+  "lx"
+  "lyp"
+  "ymin"
+  "ymin"
+  "lxp"
+  above
+  "ly"
+  "lxp"
+  "stroke"
+  "stroke"
+  "black"  stroke
+  "dox"
+  "doy"
+  "ldx"
+  0
+  "x"
+  "x"
+  "AStext"
+  "x"
+  "lxp"
+
+  "ldx"
+
+  "ldx"
+  "xmin"
+  "x"
+  "AStext"
+  "x"
+  "lxp"
+
+  "ldx"
+
+  "doy"
+  "dox"
+  "ldy"
+  0
+  "y"
+  "y"
+  "AStext"
+  "y"
+  "lyp"
+
+  "ldy"
+
+  "ldy"
+  "ymin"
+  "y"
+  "AStext"
+  "y"
+  "lyp"
+
+  "ldy"
+
+  "backupstroke"
+  stroke
+  "usegd2"
+  "imagesetthickness"
+  "img"
+  "strokewidth"
+
+  
+  "arg"
+  1  "count"
+  "arg"
+
+  
+  "pt2arr"
+
+  "pt2arr"
+
+  "isdashed"
+  "imageline"
+  "img"
+  "p"
+  "p"
+  "q"
+  "q"
+  "IMG_COLOR_STYLED"
+
+
+  "stroke"
+  "imageline"
+  "img"
+  "p"
+  "p"
+  "q"
+  "q"
+  "color"
+
+  "marker"
+  "ASdot"
+  8
+  8
+  "ASdot"
+  8
+  8
+  "marker"
+  "ASarrowhead"
+  "q"
+
+  
+  "arg"
+  1  "str_replace"
+  "["  str_replace
+  "37396896"
+  "arg"
+
+  "explode"
+  ","
+  "arg"
+
+  "count"
+  "arg"
+
+  
+  0  "count"
+  "arg"
+
+
+  "i"
+  "i"
+  "arg"
+
+  "i"
+  "i"
+
+
+  "i"
+
+  "i"
+  "fill"
+  "imagefilledpolygon"
+  "img"
+  "pt"
+  "count"
+  "pt"
+
+  "color"
+
+  "stroke"
+  "i"
+  "i"
+  "arg"
+
+  "ASline"
+
+  "i"
+  2
+    2
+  "arg"
+  "ASellipse"
+
+  
+  "arg"
+  "pt2arr"
+
+  "evalifneeded"
+
+
+  "evalifneeded"
+
+
+  "fill"
+  "fill"
+  "usegd2"
+  "imagefilledellipse"
+  "img"
+  "p"
+  "p"
+  "arg"
+  "arg"
+  "color"
+
+  "isdashed"
+  "imageellipse"
+  "img"
+  "p"
+  "p"
+  "arg"
+  "arg"
+  "IMG_COLOR_STYLED"
+
+  
+  "stroke"
+  "imageellipse"
+  "img"
+  "p"
+  "p"
+  "arg"
+  "arg"
+  "color"
+
+  
+  "arg"
+  "pt2arr"
+
+  "pt2arr"
+
+  "min"
+  "p"
+  "q"
+
+  "max"
+  "p"
+  "q"
+
+  "min"
+  "p"
+  "q"
+
+  "max"
+  "p"
+  "q"
+
+  "fill"
+  "fill"
+  "imagefilledrectangle"
+  "img"
+  "sx"
+  "sy"
+  "bx"
+  "by"
+  "color"
+
+  "isdashed"
+  "imagerectangle"
+  "img"
+  "sx"
+  "sy"
+  "bx"
+  "by"
+  "IMG_COLOR_STYLED"
+
+  
+  "stroke"
+  "color"
+  "imagerectangle"
+  "img"
+  "sx"
+  "sy"
+  "bx"
+  "by"
+  "color"
+
+  
+  "arg"
+  "pt2arr"
+
+  "pt2arr"
+
+  "evalifneeded"
+
+  "p"
+
+  "q"
+
+  "height"
+
+  "height"
+
+  "po"
+
+  "po"
+
+  "sqrt"
+  "po"
+
+  "t"
+  "r"
+
+  "t"
+  "r"
+
+  "round"
+  "cxo"
+
+  "round"
+  "height"
+
+  "atan2"
+  "po"
+  "po"
+
+  "atan2"
+  "qo"
+  "qo"
+
+  "r"
+  "r"
+  "fill"
+  "fill"
+  "imagefilledarc"
+  "img"
+  "cx"
+  "cy"
+  "xdiam"
+  "ydiam"
+  "startt"
+  "endt"
+  "color"
+
+  "isdashed"
+  "imagearc"
+  "img"
+  "cx"
+  "cy"
+  "xdiam"
+  "ydiam"
+  "startt"
+  "endt"
+  "IMG_COLOR_STYLED"
+
+  
+  "stroke"
+  "color"
+  "imagearc"
+  "img"
+  "cx"
+  "cy"
+  "xdiam"
+  "ydiam"
+  "startt"
+  "endt"
+  "color"
+
+  
+  "pt"
+  "r"
+  "markerfill"
+  "markerfill"
+  "usegd2"
+  "imagefilledellipse"
+  "img"
+  "pt"
+  "pt"
+  "r"
+  "r"
+  "color"
+
+
+  "imagefilledpolygon"
+  "img"
+  "pt"
+  4
+  "color"
+
+  "stroke"
+  "imageellipse"
+  "img"
+  "pt"
+  "pt"
+  "r"
+  "r"
+  "color"
+
+  
+  "arg"
+  "pt2arr"
+
+  "stroke"
+  "arg"
+  "usegd2"
+  "imagefilledellipse"
+  "img"
+  "pt"
+  "pt"
+  "dotradius"
+  "dotradius"
+  "color"
+
+
+  "dotradius"
+  "imagefilledpolygon"
+  "img"
+  "pt"
+  4
+  "color"
+
+
+  "usegd2"
+  "imagefilledellipse"
+  "img"
+  "pt"
+  "pt"
+  "dotradius"
+  "dotradius"
+  "white"
+
+
+  "dotradius"
+  "imagefilledpolygon"
+  "img"
+  "pt"
+  4
+  "white"
+
+  "imageellipse"
+  "img"
+  "pt"
+  "pt"
+  "dotradius"
+  "dotradius"
+  "color"
+
+  "arg"
+  "arg"
+  "AStext"
+
+  
+  "AStext"
+
+  
+  "v"
+  "w"
+  "w"
+  "sqrt"
+  "u"
+
+  "d"
+  "u"
+  "u"
+  "w"
+  "stroke"
+  "imagefilledpolygon"
+  "img"
+  "arr"
+  "count"
+  "arr"
+
+  "color"
+
+  
+  "arg"
+  "arg"
+  "count"
+  "arg"
+
+  "arg"
+
+  "dx"
+  "count"
+  "arg"
+
+  "arg"
+
+  "dy"
+  "preg_match_all"
+  "/[a-zA-Z]+/"
+  "func"
+  "matches"
+  "PREG_PATTERN_ORDER"
+
+  "sin"
+  "matches"
+
+  "in_array"
+  "m"
+  "okfunc"
+
+
+
+  
+
+  "mathphp"
+  "func"
+  "x|y"
+  x|y
+  "str_replace"
+  "x"  str_replace
+  "$x"
+  "func"
+
+  "create_function"
+  "$x,$y"
+  "func"
+
+  "sqrt"
+  "dx"
+
+  "ceil"
+  "xmin"
+
+  "ceil"
+  "ymin"
+
+  "x_min"
+  "x"
+  "y_min"
+  "y"
+
+  "x"
+  "y"
+
+  "gxy"
+  "gxy"
+  "gxy"
+
+  "gxy"
+  "u"
+  "dz"
+
+  "dz"
+  "gxy"
+
+  "gxy"
+  "ASline"
+
+  "dy"
+
+  "dx"
+
+  
+  "function"
+  1  "implode"
+  ","
+  "function"
+
+  "preg_match_all"
+  "/[a-zA-Z]+/"
+  "funcstr"
+  "matches"
+  "PREG_PATTERN_ORDER"
+
+  "sin"
+  "matches"
+
+  "in_array"
+  "m"
+  "okfunc"
+
+
+
+  
+
+  "str_replace"
+  """  str_replace
+  "37610264"
+  "function"
+
+  "strpos"
+  "function"
+  "["
+  [
+  "explode"
+  ","
+  "function"
+
+  "true"
+  "str_replace"
+  "["
+  "37610776"
+  "funcp"
+
+  "mathphp"
+  "xfunc"
+  "t"
+  t
+  "str_replace"
+  "(t)"
+  "($t)"
+  "xfunc"
+
+  "create_function"
+  "$t"
+  "xfunc"
+
+  "str_replace"
+  "]"
+  "37448512"
+  "funcp"
+
+  "mathphp"
+  "yfunc"
+  "t"
+  t
+  "str_replace"
+  "(t)"
+  "($t)"
+  "yfunc"
+
+  "create_function"
+  "$t"
+  "yfunc"
+
+
+  "false"
+  "mathphp"
+  "function"
+  "x"
+  x
+  "str_replace"
+  "(x)"
+  "($x)"
+  "func"
+
+  "create_function"
+  "$x"
+  "func"
+
+
+  "function"
+  "function"
+
+  "xmin"
+  "border"
+  5
+  5
+  "function"
+  "explode"
+  "!"
+  "function"
+
+  "xmaxarr"
+  "array_slice"
+  "xmaxarr"
+  1
+  1
+
+  "xmax"
+  "border"
+  5
+  5
+  "xmax"
+  "function"
+  "xmax"
+  "function"
+
+  "xmax"
+  "stopat"
+  "null"
+  "null"
+  "lasty"
+  "lastl"
+  "i"
+  "i"
+  "isparametric"
+  "xmin"
+  "in_array"
+  "t"
+  "avoid"
+
+  1
+  "exfunc"
+  "t"
+
+  "eyfunc"
+  "t"
+
+  "is_nan"
+  "x"
+
+  "y"
+
+  1
+  "xmin"
+  "in_array"
+  "x"
+  "avoid"
+
+  1
+  "efunc"
+  "x"
+
+  "is_nan"
+  "y"
+
+  1
+  "i"
+  "i"
+
+  "i"
+
+  "x"
+  "py"
+
+  "y"
+  "py"
+  "y"
+  "ymax"
+  "border"
+  5
+  5
+
+  "ymin"
+  "border"
+  5
+  5
+  "x"
+  "ASline"
+
+
+  "py"
+  "y"
+  "py"
+  "ymax"
+  "border"
+  5
+  5
+
+  "ymin"
+  "border"
+  5
+  5
+  "x"
+  "ASline"
+
+
+  "ASline"
+
+  "x"
+  "y"
+  "i"
+  "function"
+  "function"
+  "ASarrowhead"
+
+  "pt2arr"
+
+
+
+  "function"
+  "ASdot2"
+
+
+  "function"
+  "ASdot2"
+
+  "function"
+  "function"
+  "ASarrowhead"
+
+  "pt2arr"
+
+
+  
+  "function"
+  "ASdot2"
+
+  
+  "function"
+  "ASdot2"
+
+  
+  "pt"
+  1  "str_replace"
+  "["  str_replace
+  "37623240"
+  "pt"
+
+  "explode"
+  ","
+  "pt"
+
+  "evalifneeded"
+
+
+  "height"
+
+
+  "pt"
+  "str"
+  "lp"
+  "qd"
+  "bd"
+  0
+  "i"
+  "i"
+  "str"
+
+  "i"
+  "bd"
+  "bd"
+  "qd"
+  "i"
+  "i"
+  "substr"
+  "str"
+  "lp"
+  "i"
+
+
+
+  "args"
+  "37629040"
+  "i"
+  "i"
+  "substr"
+  "str"
+  "lp"
+
+
+  "i"
+  "i"
+  "args"
+
+  "i"
+  """  str_replace
+  "37629672"
+  "i"
+
+
+  "i"
+  "args"
+  "func_num_args"
+  func_num_args
+  "func_get_arg"
+  0
+  0
+  "imagepng"
+  "img"
+  "filename"
+  8
+  8
+  
+  0  "imagepng"
+  "img"
+  "null"
+  8
+  8
+  
+  "str"
+  1  "is_numeric"
+  "str"
+
+  "str"
+  "preg_match"
+  "/[^\d+\-\/\*\.]/"
+  "str"
+
+  "str"
+
+  "ret"
