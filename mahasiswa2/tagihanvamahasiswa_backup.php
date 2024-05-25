@@ -446,107 +446,62 @@ if ( $aksi == "tagihanvamahasiswa" )
     $dataMhs = doquery($koneksi,$dataMahasiswa);
     $bioMhs=mysqli_fetch_array($dataMhs);
 
-    /*$dataBelumBayar="
-    SELECT
-	c.NAMA AS NAMAKOMPONEN,
-	c.ID AS IDKOMPONEN,
-	a.IDPRODI,
-	b.GELOMBANG,
-	a.SEMESTER,
-	b.ID,
-	b.NAMA,
-	a.ANGKATAN,
-	a.TAHUN,
-	CASE WHEN a.TAHUN = '0000' THEN '-' ELSE CONCAT( CAST( a.TAHUN AS UNSIGNED ) - 1, '/', a.TAHUN ) END AS TAHUNAJARAN,
-	c.JENIS,
-	bk.BIAYA,
-	CASE WHEN btd.NOREC IS NULL THEN 0 ELSE 1 END AS DISABLED	
-	FROM
-		biayakomponen_tagihan a
-		JOIN mahasiswa b ON a.IDPRODI = b.IDPRODI 
-		AND a.GELOMBANG = b.GELOMBANG 
-		AND a.ANGKATAN = b.ANGKATAN
-		LEFT JOIN biayakomponen_tagihan_mahasiswa AS bta ON bta.NOREC = a.NOREC
-		JOIN komponenpembayaran c ON a.IDKOMPONEN = c.ID
-		LEFT JOIN biayakomponen_tagihan_disabled AS btd ON btd.NOREC = a.NOREC 
-		AND btd.IDMAHASISWA = b.ID
-		JOIN biayakomponen AS bk ON bk.IDKOMPONEN = a.IDKOMPONEN 
-		AND a.IDPRODI = bk.IDPRODI 
-		AND b.ANGKATAN = bk.ANGKATAN 
-		AND bk.IDPRODI = b.IDPRODI 
-		AND bk.GELOMBANG = b.GELOMBANG 
-	WHERE
-		b.ID = '61119027' 
-		AND bta.NOREC IS NULL 
-		AND c.ID = 032 
- 		AND a.TAHUN = 2023 
- 		AND a.SEMESTER = 2
-	GROUP BY
-	c.NAMA,
-	c.ID,
-	a.IDPRODI,
-	b.GELOMBANG,
-	a.SEMESTER,
-	b.ID,
-	b.NAMA,
-	a.ANGKATAN,
-	a.TAHUN,
-	c.JENIS,
-	bk.BIAYA,
-	DISABLED
-	ORDER BY
-	a.TAHUN,
-	a.SEMESTER";*/
-	 
-	$dataBelumBayar="
-    SELECT * FROM (SELECT
+    $dataBelumBayar="
+    SELECT x.* FROM (SELECT
         c.NAMA AS NAMAKOMPONEN,
         c.ID AS IDKOMPONEN,
         a.IDPRODI,
         b.GELOMBANG,
         a.SEMESTER,
+        a.TANGGAL,
+        DATE_FORMAT( a.TANGGAL, '%d-%m-%Y' ) AS TANGGALTAGIHAN,
         b.ID,
-        b.NAMA,
+        b.NAMA,        
+        DATE_FORMAT( a.TANGGALBAYAR2, '%d-%m-%Y' ) AS BATASBAYAR,
+        a.NOREC,
         a.ANGKATAN,
         a.TAHUN,
-        CASE WHEN a.TAHUN = '0000' THEN '-' ELSE CONCAT( CAST( a.TAHUN AS UNSIGNED ) - 1, '/', a.TAHUN ) END AS TAHUNAJARAN,
+        CASE WHEN a.TAHUN = '0000' THEN '-' ELSE CONCAT(CAST(a.TAHUN AS UNSIGNED) - 1, '/', a.TAHUN) END AS TAHUNAJARAN,
+        a.TANGGALBAYAR2,
         c.JENIS,
-        bk.BIAYA,
-        CASE WHEN btd.NOREC IS NULL THEN 0 ELSE 1 END AS DISABLED	
-	FROM
-		biayakomponen_tagihan a
-		JOIN mahasiswa b ON a.IDPRODI = b.IDPRODI 
-		AND a.GELOMBANG = b.GELOMBANG 
-		AND a.ANGKATAN = b.ANGKATAN
-		LEFT JOIN biayakomponen_tagihan_mahasiswa AS bta ON bta.NOREC = a.NOREC
-		JOIN komponenpembayaran c ON a.IDKOMPONEN = c.ID
-		LEFT JOIN biayakomponen_tagihan_disabled AS btd ON btd.NOREC = a.NOREC 
-		AND btd.IDMAHASISWA = b.ID
-		JOIN biayakomponen AS bk ON bk.IDKOMPONEN = a.IDKOMPONEN 
-		AND a.IDPRODI = bk.IDPRODI 
-		AND b.ANGKATAN = bk.ANGKATAN 
-		AND bk.IDPRODI = b.IDPRODI 
-		AND bk.GELOMBANG = b.GELOMBANG 
-	WHERE
-		b.ID = '$users'
-		AND bta.NOREC IS NULL
+        a.BIAYA,
+	case when btd.NOREC is null then 0 else 1 end as DISABLED
+    FROM
+        biayakomponen_tagihan a
+        JOIN mahasiswa b ON a.IDPRODI = b.IDPRODI 
+        AND a.GELOMBANG = b.GELOMBANG 
+        AND a.ANGKATAN = b.ANGKATAN
+        LEFT JOIN biayakomponen_tagihan_mahasiswa AS bta ON bta.NOREC = a.NOREC
+        JOIN komponenpembayaran c ON a.IDKOMPONEN = c.ID 
+	LEFT JOIN biayakomponen_tagihan_disabled as btd on btd.NOREC = a.NOREC AND btd.IDMAHASISWA = b.ID
+    WHERE
+        b.ID = '$users'
+        AND bta.NOREC IS NULL
+        AND c.ID = 032
+        AND a.TAHUN = 2023
+        AND a.SEMESTER = 1
 
     UNION ALL
 
-    SELECT
+    SELECT        
         c.NAMA AS NAMAKOMPONEN,
         c.ID AS IDKOMPONEN,
         a.IDPRODI,
         b.GELOMBANG,
         a.SEMESTER,
+        a.TANGGAL,
+        DATE_FORMAT( a.TANGGAL, '%d-%m-%Y' ) AS TANGGALTAGIHAN,
         b.ID,
-        b.NAMA,
+        b.NAMA,        
+        DATE_FORMAT( a.TANGGALBAYAR2, '%d-%m-%Y' ) AS BATASBAYAR,
+        a.NOREC,
         a.ANGKATAN,
         a.TAHUN,
-        CASE WHEN a.TAHUN = '0000' THEN '-' ELSE CONCAT( CAST( a.TAHUN AS UNSIGNED ) - 1, '/', a.TAHUN ) END AS TAHUNAJARAN,
+        CASE WHEN a.TAHUN = '0000' THEN '-' ELSE CONCAT(CAST(a.TAHUN AS UNSIGNED) - 1, '/', a.TAHUN) END AS TAHUNAJARAN,
+        a.TANGGALBAYAR2,
         c.JENIS,
-        bk.BIAYA,
-        CASE WHEN btd.NOREC IS NULL THEN 0 ELSE 1 END AS DISABLED 
+        a.BIAYA,
+	case when btd.NOREC is null then 0 else 1 end as DISABLED
     FROM
         biayakomponen_tagihan a
         JOIN mahasiswa b ON a.IDPRODI = b.IDPRODI 
@@ -557,37 +512,18 @@ if ( $aksi == "tagihanvamahasiswa" )
         JOIN komponenpembayaran c ON a.IDKOMPONEN = c.ID
         LEFT JOIN buattagihanva AS ba ON ba.NOREC = a.NOREC 
         AND ba.IDMAHASISWA = b.ID
-        LEFT JOIN biayakomponen_tagihan_disabled AS btd ON btd.NOREC = a.NOREC 
-        AND btd.IDMAHASISWA = b.ID 
-        JOIN biayakomponen AS bk ON bk.IDKOMPONEN = a.IDKOMPONEN 
-            AND a.IDPRODI = bk.IDPRODI 
-            AND b.ANGKATAN = bk.ANGKATAN 
-            AND bk.IDPRODI = b.IDPRODI 
-            AND bk.GELOMBANG = b.GELOMBANG 
+	LEFT JOIN biayakomponen_tagihan_disabled as btd on btd.NOREC = a.NOREC AND btd.IDMAHASISWA = b.ID
     WHERE
         b.ID = '$users' 
         AND ba.STATUS IS NULL 
-        AND bta.NOREC IS NOT NULL ) AS x
-    GROUP BY
-        x.NAMA,
-        x.ID,
-        x.IDPRODI,
-        x.GELOMBANG,
-        x.SEMESTER,
-        x.ID,
-        x.NAMA,
-        x.ANGKATAN,
-        x.TAHUN,
-        x.JENIS,
-        x.BIAYA,
-        x.DISABLED
+        AND bta.NOREC IS NOT NULL 
+    ) as x
     ORDER BY
-        x.TAHUN,
-        x.SEMESTER";
-	// echo $dataBelumBayar.'<br>';
+    x.TANGGAL ASC,	
+    x.IDKOMPONEN";
     $itemBelumBayar = doquery($koneksi,$dataBelumBayar);
 
-    /*$dataUdahBayar = "
+    $dataUdahBayar = "        
     SELECT
         SUM(JUMLAH) AS TOTAL,
         IDMAHASISWA,
@@ -606,175 +542,103 @@ if ( $aksi == "tagihanvamahasiswa" )
     ORDER BY
         IDKOMPONEN ASC,
         TAHUNAJARAN
-    ";*/
-	$dataUdahBayar = "
-    SELECT
-        SUM(JUMLAH+DISKON) AS TOTAL,
-        IDMAHASISWA,
-        IDKOMPONEN,
-        TAHUNAJARAN,
-        SEMESTER 
-    FROM
-        bayarkomponen 
-    WHERE
-        IDMAHASISWA = '$users'
-		AND IDKOMPONEN = 032
-    GROUP BY
-        IDMAHASISWA,
-        IDKOMPONEN,
-        TAHUNAJARAN,
-        SEMESTER 
-    ORDER BY
-        IDKOMPONEN ASC,
-        TAHUNAJARAN
     ";
     $itemUdahBayar = doquery($koneksi, $dataUdahBayar);
 
+    $dataDiskon = "select * from diskonbeasiswa where IDMAHASISWA = '$users'";
+    $itemDiskon = doquery($koneksi, $dataDiskon);
+
     $results =array();
-	$i=0;
-    foreach($itemBelumBayar as $item){		
-        $idKomponen = $item['IDKOMPONEN'];
-        $tahun = $item['TAHUN'];
-        $semester = $item['SEMESTER'];
-        $idProdi = $item['IDPRODI'];
-        $angkatan = $item['ANGKATAN'];
-        $gelombang = $item['GELOMBANG'];
+    foreach($itemUdahBayar as $items){
+        $total = $items['TOTAL'];
+        foreach ($itemBelumBayar as $item){
+            if ($item['ID'] == $items['IDMAHASISWA'] && $item['IDKOMPONEN'] == $items['IDKOMPONEN'] && $item['TAHUN'] == $items['TAHUNAJARAN'] && $item['SEMESTER'] == $items['SEMESTER']) {
+            $total -= $item['BIAYA'];
 
-        $dataBeasiswa = "select DISKON from diskonbeasiswa where IDMAHASISWA = '$users' AND IDKOMPONEN = $idKomponen AND TAHUN = $tahun AND SEMESTER = $semester AND KATEGORI = 1 ";
-        $itemBeasiswa = doquery($koneksi, $dataBeasiswa);
+            $idKomponen = $item['IDKOMPONEN'];
+            $tahun = $item['TAHUN'];
+            $semester = $item['SEMESTER'];
+            $idProdi = $item['IDPRODI'];
+            $angkatan = $item['ANGKATAN'];
+            $gelombang = $item['GELOMBANG'];
 
-        $dscB=mysqli_fetch_array($itemBeasiswa);
-        // print_r( $asdft['DISKON']);
-        $dscbeasiswa = 0;
-        if($dscB['DISKON'] > 100){
-            $dscbeasiswa = $dscB['DISKON'];
-        }else{
-            $dscbeasiswa = ($dscB['DISKON'] / 100) * $item['BIAYA'];
-        }
+            $diskon1=0;
+            $diskon2=0;
+            $diskon3=0;
+        	foreach($itemDiskon as $dsc){
+                if($item['ID'] == $dsc['IDMAHASISWA'] && $item['IDKOMPONEN'] == $dsc['IDKOMPONEN'] && $item['TAHUN'] == $dsc['TAHUN'] && $item['SEMESTER'] == $dsc['SEMESTER']){
+                   	if($dsc['APPROVE'] == 1){
+                        if($diskon1 == 0){
+                            $diskon1=abs($total);
+                        }
+                        if($dsc['DISKON'] > 100){
+                            $diskon1 = $diskon1 - $dsc['DISKON'];		    
+                        } else {
+                            $diskon2 = ($dsc['DISKON'] / 100) * $diskon1;                          
+                        }
+                    }
+                }
+        	}
 
-        $totaldscB = $item['BIAYA'] - $dscbeasiswa;            
+            $diskon3= $diskon1 - $diskon2;
+            echo $diskon3;exit();
+            if($diskon3 == 0){
+                $diskon3=$total;
+            }
 
-        $dataDiskon = "select DISKON from diskonbeasiswa where IDMAHASISWA = '$users' AND IDKOMPONEN = $idKomponen AND TAHUN = $tahun AND SEMESTER = $semester AND KATEGORI = 2 ";
-        $itemDiskon = doquery($koneksi, $dataDiskon);
+            $dataDenda = "select * from biayakomponen where IDKOMPONEN='$idKomponen' AND IDPRODI=$idProdi AND ANGKATAN=$angkatan AND GELOMBANG=$gelombang";
+            $itemDenda = doquery($koneksi, $dataDenda);
+            echo $dataDenda;
 
-        $dscD=mysqli_fetch_array($itemDiskon);
-        $dscdiskon = 0;
-        // print_r( $asdft['DISKON']);
-        if($dscD['DISKON'] > 100){
-            $dscdiskon = $dscD['DISKON'];
-        }else{
-            $dscdiskon = ($dscD['DISKON'] / 100) * $totaldscB;
-        }
+            $dateNow = new DateTime();
+            $targetDate = new DateTime($data['TANGGALBAYAR2']);
+            $interval = $dateNow->diff($targetDate);
+            $selisihHari = $interval->days;
 
-        $totaltagihan = $totaldscB - $dscdiskon;
-        //  echo "a".$dscbeasiswa.'<br>';
-        //  echo "b".$total.'<br>';
-        //  echo "c".$totaldscB.'<br>';
-        //  echo "d".$dscdiskon.'<br>';
-        foreach($itemUdahBayar as $items){
-			if ($item['ID'] == $items['IDMAHASISWA'] && $item['IDKOMPONEN'] == $items['IDKOMPONEN'] && $item['TAHUN'] == $items['TAHUNAJARAN'] && $item['SEMESTER'] == $items['SEMESTER']) {
-                // echo "ITERASI=".$i.'<br>';
-				// echo "TOTAL PERTAMA NILAINYA=".$total.'<br>';
-				$total -= $items['TOTAL'];
-				// echo "TOTAL KEDUA NILAINYA=".$total.'<br>';
-				#$totalbayar=$items['TOTAL']+($dscbeasiswa+$dscdiskon);
-				$totalbayar=$items['TOTAL'];
-				// echo "TOTAL TAGIHAN =".$totaltagihan.'<br>';
-                // echo "TOTAL BAYAR =".$totalbayar.'<br>';
-				$tagharusbayar=$totaltagihan-$totalbayar;
-				// echo "TAGIHAN YANG HARUS DIBAYAR=".($tagharusbayar).'<br>';
-                if($tagharusbayar>0){
-					$bktagihanmhs="select BIAYA,IDKOMPONEN,ANGKATAN,GELOMBANG,TAHUN, SEMESTER,TANGGALBAYAR2 from biayakomponen_tagihan where ".
-					"IDPRODI = $idProdi and ANGKATAN = $angkatan and GELOMBANG = $gelombang and TAHUN = $tahun and SEMESTER = $semester ORDER BY
-					TANGGALBAYAR2";
-					// echo $bktagihanmhs.'<br>';
-					$bkt= doquery($koneksi, $bktagihanmhs);
-					#echo $asdf.'<br>';
-					foreach($bkt as $ds){
-						#echo $ds['BIAYA'].'<br>';
-						// echo "TOTAL BAYAR LOOPING AWAL=".$totalbayar.'<br>';
-						// echo "CICILAN=".$ds['BIAYA'].'<br>';
-						// echo "JTH TEMPO=".$ds['TANGGALBAYAR2'].'<br>';
-						#$totalbayar -= $ds['BIAYA'];
-						if($totalbayar==0){
-							$sisatagihan=$tagharusbayar;	
-						}else{
-							$sisatagihan=$ds['BIAYA']-$totalbayar;	                    
-							
-						}
-						// echo "SISA TAGIHAN=".$sisatagihan.'<br>';	
-						#if($totalbayar < 1){
-						if($sisatagihan>0){	
-							$detail[]=array(
-								'IDKOMPONEN' => $ds['IDKOMPONEN'],
-								'TANGGAL' => $ds['TANGGALBAYAR2'],
-								#'BIAYA' => $ds['BIAYA']-abs($totalbayar),
-								'BIAYA' => $tagharusbayar,
-							);							
-						}
-						
-						$totalbayar =$totalbayar-$ds['BIAYA'];	
-						// echo "TOTAL BAYAR LOOPING KEDUA=".$totalbayar.'<br>';
-								
-					}
-					// print_r($detail);
-					// echo '<br>';
-					$dataDenda = "select JENISDENDA,KATEGORIDENDA,DENDA from biayakomponen where IDKOMPONEN='$idKomponen' AND IDPRODI=$idProdi AND ANGKATAN=$angkatan AND GELOMBANG=$gelombang";
-					$itemDenda = doquery($koneksi, $dataDenda);
+            $denda=mysqli_fetch_array($itemDenda);
+            $totalDenda=0;
+            if($selisihHari > 0){
+                if ( $denda['JENISDENDA'] == 0 ){
+                    if($denda['KATEGORIDENDA']==0){
+                        $totalDenda= ($denda['DENDA']/100)*$diskon3;
+                    }else{
+                        $totalDenda= ($denda['DENDA']);
+                    }
+                } else {
+                    if($denda['KATEGORIDENDA']==0){
+                        $totalDenda= ($diskon3*( $denda['DENDA']/100))*$selisihHari;
+                    }else{
+                        $totalDenda= $denda['DENDA'] * $selisihHari;
+                    }
+                }
+            }
 
-					$dateNow = new DateTime();
-					$targetDate = new DateTime($detail[$i]['TANGGAL']);
-					$interval = $dateNow->diff($targetDate);
-					$selisihHari = $interval->days;
-
-					$denda=mysqli_fetch_array($itemDenda);
-					$totalDenda=0;
-					// echo $selisihHari;
-					if($targetDate < $dateNow){
-						if ( $denda['JENISDENDA'] == 0 ){
-							if($denda['KATEGORIDENDA']==0){
-								$totalDenda= ($denda['DENDA']/100)*$detail[$i]['BIAYA'];
-							}else{
-								$totalDenda= ($denda['DENDA']);
-							}
-						} else {
-							if($denda['KATEGORIDENDA']==0){
-								$totalDenda= ($detail[$i]['BIAYA']*( $denda['DENDA']/100))*$selisihHari;
-							}else{
-								$totalDenda= $denda['DENDA'] * $selisihHari;
-							}
-						}
-					} 
-					// echo $detail[0]['BIAYA'].' '.($denda['DENDA']/100). ' '. $selisihHari;exit();     
-					#if($total > 0){
-					#if($tagharusbayar > 0){	
-						$results[] = array(
-							'NAMAKOMPONEN' => $item['NAMAKOMPONEN'],
-							'IDKOMPONEN' => $item['IDKOMPONEN'],
-							'SEMESTER' => $item['SEMESTER'],
-							'TANGGAL' => $item['TANGGAL'],
-							'TANGGALTAGIHAN' => $item['TANGGALTAGIHAN'],
-							'ID' => $item['ID'],
-							'NAMA' => $item['NAMA'],
-							'BIAYA' => $detail[$i]['BIAYA'],
-							'BATASBAYAR' => $detail[$i]['TANGGAL'],
-							'NOREC' => $item['NOREC'],
-							'ANGKATAN' => $item['ANGKATAN'],
-							'TAHUN' => $item['TAHUN'],
-							'TAHUNAJARAN' => $item['TAHUNAJARAN'],
-							'DENDA' => $totalDenda,
-							'JENIS' => $item['JENIS'],
-							'DISKON' => $total - $totaldscD,
-							'TANGGALBAYAR2' => $detail[$i]['TANGGAL'],
-							'DISABLED' => $item['DISABLED'],
-							);
-						#$total=0;
-					#}
-					$i++;
-				}	
+            if($diskon3 < 0){
+                $results[] = array(
+                    'NAMAKOMPONEN' => $item['NAMAKOMPONEN'],
+                    'IDKOMPONEN' => $item['IDKOMPONEN'],
+                    'SEMESTER' => $item['SEMESTER'],
+                    'TANGGAL' => $item['TANGGAL'],
+                    'TANGGALTAGIHAN' => $item['TANGGALTAGIHAN'],
+                    'ID' => $item['ID'],
+                    'NAMA' => $item['NAMA'],
+                    'BIAYA' => abs($diskon3),
+                    'BATASBAYAR' => $item['BATASBAYAR'],
+                    'NOREC' => $item['NOREC'],
+                    'ANGKATAN' => $item['ANGKATAN'],
+                    'TAHUN' => $item['TAHUN'],
+                    'TAHUNAJARAN' => $item['TAHUNAJARAN'],
+                    'DENDA' => $totalDenda,
+                    'JENIS' => $item['JENIS'],
+                    'DISKON' => $total - $diskon3,
+                    'TANGGALBAYAR2' => $item['TANGGALBAYAR2'],
+                    'DISABLED' => $item['DISABLED'],
+                    );
+                    $total=0;
+                    }
+                }            
             }
         }
-    }
 
     foreach ($itemBelumBayar as $data){
         $idKomponen = $data['IDKOMPONEN'];
@@ -787,87 +651,79 @@ if ( $aksi == "tagihanvamahasiswa" )
         $belumLunas = "SELECT * FROM bayarkomponen WHERE IDMAHASISWA = $users AND IDKOMPONEN = $idKomponen AND TAHUNAJARAN = $tahun AND SEMESTER = $semester";
         $dataBelumLunas = doquery($koneksi, $belumLunas);
         
-        $dataBeasiswa = "select DISKON from diskonbeasiswa where IDMAHASISWA = '$users' AND IDKOMPONEN = $idKomponen AND TAHUN = $tahun AND SEMESTER = $semester AND KATEGORI = 1 ";
-        $itemBeasiswa = doquery($koneksi, $dataBeasiswa);
-
-        $dscB=mysqli_fetch_array($itemBeasiswa);
-        // print_r( $asdft['DISKON']);
-        $dscbeasiswa = 0;
-        if($dscB['DISKON'] > 100){
-            $dscbeasiswa = $dscB['DISKON'];
-        }else{
-            $dscbeasiswa = ($dscB['DISKON'] / 100) * $item['BIAYA'];
+        $ada=false;
+        // echo $data['DISKON'];
+        $diskon1=0;
+        $diskon2=0;
+        $diskon3=0;
+        foreach($itemDiskon as $dsc){
+            if($data['ID'] == $dsc['IDMAHASISWA'] && $data['IDKOMPONEN'] == $dsc['IDKOMPONEN'] && $data['TAHUN'] == $dsc['TAHUN'] && $data['SEMESTER'] == $dsc['SEMESTER']){
+                if($dsc['APPROVE'] == 1){
+                    if($diskon1 == 0){
+                        $diskon1=$data['BIAYA'];
+                    }
+                    if($dsc['DISKON'] > 100){
+                        $diskon1 = $diskon1 - $dsc['DISKON'];		    
+                    } else {
+                        $diskon2 = ($dsc['DISKON'] / 100) * $diskon1;                          
+                    }
+                }
+            }
+        }
+        $diskon3= $diskon1 - $diskon2;
+        if($diskon3 == 0){
+            $diskon3=$data['BIAYA'];
         }
 
-        $totaldscB = $item['BIAYA'] - $dscbeasiswa;            
+        $dataDenda = "select * from biayakomponen where IDKOMPONEN='$idKomponen' AND IDPRODI=$idProdi AND ANGKATAN=$angkatan AND GELOMBANG=$gelombang";
+        $itemDenda = doquery($koneksi, $dataDenda);
 
-        $dataDiskon = "select DISKON from diskonbeasiswa where IDMAHASISWA = '$users' AND IDKOMPONEN = $idKomponen AND TAHUN = $tahun AND SEMESTER = $semester AND KATEGORI = 2 ";
-        $itemDiskon = doquery($koneksi, $dataDiskon);
+        $dateNow = new DateTime();
+        $targetDate = new DateTime($data['TANGGALBAYAR2']);
+        $interval = $dateNow->diff($targetDate);
+        $selisihHari = $interval->days;
 
-        $dscD=mysqli_fetch_array($itemDiskon);
-        $dscdiskon = 0;
-        // print_r( $asdft['DISKON']);
-        if($dscD['DISKON'] > 100){
-            $dscdiskon = $dscD['DISKON'];
-        }else{
-            $dscdiskon = ($dscD['DISKON'] / 100) * $totaldscB;
-        }
-
-        $bktagihanmhs="select BIAYA,IDKOMPONEN,ANGKATAN,GELOMBANG,TAHUN, SEMESTER,TANGGALBAYAR2 from biayakomponen_tagihan where ".
-        "IDPRODI = $idProdi and ANGKATAN = $angkatan and GELOMBANG = $gelombang and TAHUN = $tahun and SEMESTER = $semester ORDER BY
-        TANGGALBAYAR2";
-        // echo $bktagihanmhs.'<br>';
-        $bkt= doquery($koneksi, $bktagihanmhs);
-        #echo $asdf.'<br>';
-
-        foreach($bkt as $ds){
-            #echo $ds['BIAYA'].'<br>';
-            // echo "TOTAL BAYAR LOOPING AWAL=".$totalbayar.'<br>';
-            // echo "CICILAN=".$ds['BIAYA'].'<br>';
-            // echo "JTH TEMPO=".$ds['TANGGALBAYAR2'].'<br>';
-            #$totalbayar -= $ds['BIAYA'];
-            if($totalbayar==0){
-                $sisatagihan=$tagharusbayar;	
-            }else{
-                $sisatagihan=$ds['BIAYA']-$totalbayar;
+        $denda=mysqli_fetch_array($itemDenda);
+        $totalDenda=0;
+        if($selisihHari > 0){
+            if ( $denda['JENISDENDA'] == 0 ){
+                if($denda['KATEGORIDENDA']==0){
+                $totalDenda= ($denda['DENDA']/100)*$diskon3;
+                }else{
+                $totalDenda= ($denda['DENDA']);
+                }
+            } else {
+                if($denda['KATEGORIDENDA']==0){
+                    $totalDenda= ($diskon3*( $denda['DENDA']/100))*$selisihHari;
+                }else{
+                    $totalDenda= $denda['DENDA'] * $selisihHari;
+                }
             }
-            // echo "SISA TAGIHAN=".$sisatagihan.'<br>';
-            if($sisatagihan>0){	
-                $detail[]=array(
-                    'IDKOMPONEN' => $ds['IDKOMPONEN'],
-                    'TANGGAL' => $ds['TANGGALBAYAR2'],
-                    #'BIAYA' => $ds['BIAYA']-abs($totalbayar),
-                    'BIAYA' => $tagharusbayar,
-                );							
-            }
-            
-            $totalbayar =$totalbayar-$ds['BIAYA'];	
-            // echo "TOTAL BAYAR LOOPING KEDUA=".$totalbayar.'<br>';
         }
 
         if(mysqli_fetch_array($dataBelumLunas) == NULL) {
             $results[] = array(
-                'NAMAKOMPONEN' => $data['NAMAKOMPONEN'],
-                'IDKOMPONEN' => $data['IDKOMPONEN'],
-                'SEMESTER' => $data['SEMESTER'],
-                'TANGGAL' => $data['TANGGAL'],
-                'TANGGALTAGIHAN' => $data['TANGGALTAGIHAN'],
-                'ID' => $data['ID'],
-                'NAMA' => $data['NAMA'],
-                'BIAYA' => $data['BIAYA'],
-                'BATASBAYAR' => $detail[$i]['TANGGAL'],
-                'NOREC' => $data['NOREC'],
-                'ANGKATAN' => $data['ANGKATAN'],
-                'TAHUN' => $data['TAHUN'],
-                'TAHUNAJARAN' => $data['TAHUNAJARAN'],
-                'DENDA' => $totalDenda,
-                'JENIS' => $data['JENIS'],
-                'DISKON' => $data['BIAYA'] - $totaldscD,
-                'TANGGALBAYAR2' => $detail[$i]['TANGGAL'],
-                'DISABLED' => $data['DISABLED'],
+            'NAMAKOMPONEN' => $data['NAMAKOMPONEN'],
+            'IDKOMPONEN' => $data['IDKOMPONEN'],
+            'SEMESTER' => $data['SEMESTER'],
+            'TANGGAL' => $data['TANGGAL'],
+            'TANGGALTAGIHAN' => $data['TANGGALTAGIHAN'],
+            'ID' => $data['ID'],
+            'NAMA' => $data['NAMA'],
+            'BIAYA' => $diskon3,
+            'BATASBAYAR' => $data['BATASBAYAR'],
+            'NOREC' => $data['NOREC'],
+            'ANGKATAN' => $data['ANGKATAN'],
+            'TAHUN' => $data['TAHUN'],
+            'TAHUNAJARAN' => $data['TAHUNAJARAN'],
+            'DENDA' => $totalDenda,
+            'JENIS' => $data['JENIS'],
+            'DISKON' => $data['BIAYA'] - $diskon3,
+            'TANGGALBAYAR2' => $data['TANGGALBAYAR2'],
+            'DISABLED' => $data['DISABLED'],
             );
         }
-     }
+    }
 
     $dataKelebihanSKS = "
     SELECT
